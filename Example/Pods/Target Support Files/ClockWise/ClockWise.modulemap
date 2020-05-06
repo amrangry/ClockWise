@@ -1,0 +1,6 @@
+framework module ClockWise {
+  umbrella header "ClockWise-umbrella.h"
+
+  export *
+  module * { export * }
+}

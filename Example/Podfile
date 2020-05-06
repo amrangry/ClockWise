@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ClockWise_Example' do
+  pod 'ClockWise', :path => '../'
+
+  target 'ClockWise_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

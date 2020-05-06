@@ -1,0 +1,16 @@
+PODS:
+  - ClockWise (0.1.0)
+
+DEPENDENCIES:
+  - ClockWise (from `../`)
+
+EXTERNAL SOURCES:
+  ClockWise:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ClockWise: 2b6e11ed23aa5b1f70d366d56cae613b9f2998e1
+
+PODFILE CHECKSUM: 464baa8cb02582c007c4ae4c61a3618d6f2c1ad0
+
+COCOAPODS: 1.9.1
