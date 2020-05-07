@@ -14,7 +14,6 @@
 		5ED03CA40F21369E599F0165C52256DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6789F490E84192CF7A642DE9CF7B8E60 /* ClockWise-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD4F0C1CE15BCD653B5759D62AB0982 /* ClockWise-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8442B5B12462DF7F002CDB9B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */; };
-		8442B5B22462DF7F002CDB9B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */; };
 		8442B5B32462DF7F002CDB9B /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */; };
 		8442B5B42462DF7F002CDB9B /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */; };
 		8442B5B52462DF7F002CDB9B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */; };
@@ -74,7 +73,6 @@
 		720CB5411D092BF5B238ACF311916050 /* ClockWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF34524A46A4AD3FF8621E8E6010834 /* Pods-ClockWise_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClockWise_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
-		8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			children = (
 				8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */,
 				8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */,
-				8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */,
 				8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */,
 				8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */,
 				8442B5A52462DF7F002CDB9B /* UIViewEx.swift */,
@@ -492,7 +489,6 @@
 				848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */,
 				8442B5BB2462DF7F002CDB9B /* Optional+Extension.swift in Sources */,
 				8442B5BA2462DF7F002CDB9B /* Date+Extension.swift in Sources */,
-				8442B5B22462DF7F002CDB9B /* UIImageView+Extension.swift in Sources */,
 				8442B5B42462DF7F002CDB9B /* UIAlertController+Extension.swift in Sources */,
 				848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */,
 				8442B5BE2462DF7F002CDB9B /* Locale+Extension.swift in Sources */,
