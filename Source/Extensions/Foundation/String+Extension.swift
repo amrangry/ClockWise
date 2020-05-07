@@ -21,7 +21,7 @@ extension String {
             return trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
-   
+    
     func contains(_ find: String) -> Bool {
         return range(of: find) != nil
     }
@@ -82,10 +82,10 @@ extension String {
     }
     
     func isValidNumber() -> Bool {
-           let phoneNumberRegex = "^[0-9]"
-           let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
-           let isValidPhone = phoneTest.evaluate(with: self)
-           return isValidPhone
+        let phoneNumberRegex = "^[0-9]"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+        let isValidPhone = phoneTest.evaluate(with: self)
+        return isValidPhone
     }
     
     func isValidNationalID() -> Bool {
@@ -102,7 +102,7 @@ extension String {
         let result = emailTest.evaluate(with: self)
         return result
     }
-   
+    
     func isValidPassword() -> Bool {
         // at least one uppercase,
         // at least one digit
@@ -144,7 +144,7 @@ extension String {
         let predicate = NSPredicate(format: "SELF MATCHES %@", argumentArray: [regEx])
         return predicate.evaluate(with: urlString)
     }
-
+    
 }
 
 // MARK: - Localization
@@ -205,7 +205,7 @@ extension String {
         let result = dateFormatterPrint.string(from: date)
         return result
     }
-
+    
 }
 
 extension String {
@@ -239,8 +239,8 @@ extension String {
 
 //Personal Name Splitter
 extension String {
-     /// let name =  "Mr. Steven Paul Jobs Jr."
-     /// personNameComponents requires iOS (10.0 and later)
+    /// let name =  "Mr. Steven Paul Jobs Jr."
+    /// personNameComponents requires iOS (10.0 and later)
     @available(iOS 10.0, *)
     func splitName() -> (String, String) {
         let name = self
@@ -309,6 +309,158 @@ extension String {
         }
         
         return (firstName, lastName)
-        
+    }
+    
+    public var uppercasedFirstCharacterNew: String {
+        if count > 0 {
+            let splitIndex = index(after: startIndex)
+            let firstCharacter = self[..<splitIndex].uppercased()
+            let sentence = self[splitIndex...]
+            return firstCharacter + sentence
+        } else {
+            return self
+        }
+    }
+    
+}
+
+
+//MARK: - Text SubString
+/**
+ Start Text SubString
+ 
+ https://developer.apple.com/documentation/swift/substring
+ 
+ 
+ let text = "Hello world"
+ let xyz = text[0] // H
+ text[...3] // "Hell"
+ text[6..<text.count] // world
+ text[NSRange(location: 6, length: 3)] // wor
+ 
+ 
+ */
+
+public extension String {
+    subscript(value: Int) -> Character {
+        self[index(at: value)]
     }
 }
+
+public extension String {
+    subscript(value: NSRange) -> Substring {
+        self[value.lowerBound..<value.upperBound]
+    }
+}
+
+public extension String {
+    subscript(value: CountableClosedRange<Int>) -> Substring {
+        self[index(at: value.lowerBound)...index(at: value.upperBound)]
+    }
+    
+    subscript(value: CountableRange<Int>) -> Substring {
+        self[index(at: value.lowerBound)..<index(at: value.upperBound)]
+    }
+    
+    subscript(value: PartialRangeUpTo<Int>) -> Substring {
+        self[..<index(at: value.upperBound)]
+    }
+    
+    subscript(value: PartialRangeThrough<Int>) -> Substring {
+        self[...index(at: value.upperBound)]
+    }
+    
+    subscript(value: PartialRangeFrom<Int>) -> Substring {
+        self[index(at: value.lowerBound)...]
+    }
+}
+
+private extension String {
+    func index(at offset: Int) -> String.Index {
+        index(startIndex, offsetBy: offset)
+    }
+}
+
+extension String {
+    // LEFT
+    // Returns the specified number of chars from the left of the string
+    // let str = "Hello"
+    // print(str.left(3))         // Hel
+    func left(_ to: Int) -> String {
+        var toIndex = to;
+        if (toIndex > self.count) {
+            toIndex = self.count;
+        } else if (toIndex < 0) {
+            toIndex = 0;
+        }
+        return "\(self[..<self.index(startIndex, offsetBy: toIndex)])"
+    }
+    
+    // RIGHT
+    // Returns the specified number of chars from the right of the string
+    // let str = "Hello"
+    // print(str.left(3))         // llo
+    func right(_ from: Int) -> String {
+        var fromIndex = from;
+        if (fromIndex > self.count) {
+            fromIndex = self.count;
+        } else if (fromIndex < 0) {
+            fromIndex = 0;
+        }
+        return "\(self[self.index(startIndex, offsetBy: self.count-fromIndex)...])"
+    }
+    
+    // MID
+    // Returns the specified number of chars from the startpoint of the string
+    // let str = "Hello"
+    // print(str.left(2,amount: 2))         // ll
+    func mid(_ from: Int, amount: Int = -1) -> String {
+        //        let x = "\(self[self.index(startIndex, offsetBy: from)...])"
+        //        return x.left(amount)
+        var f = from;
+        if (f < 0) {
+            f = 0;
+        }
+        let x = "\(self[self.index(startIndex, offsetBy: f)...])"
+        return x.left(count == -1 ? x.count : count)
+    }
+    
+    // MIDAFTER
+    // Returns the substring that are found after the specified search string
+    // let str = "Hello"
+    // print(str.midAfter("e"))       // llo
+    func midAfter(_ search : String, _ count: Int = -1) -> String {
+        let r = self.range(of: search);
+        if (r == nil) {
+            return "";
+        }
+        let lb = r!.lowerBound;
+        let x = "\(self[lb...])".mid(1);
+        return x.left(count == -1 ? x.count : count)
+    }
+    
+    
+    func sliceByCharacter(from: Character, to: Character) -> String? {
+        let fromIndex = self.index(self.firstIndex(of: from)!, offsetBy: 1)
+        let toIndex = self.index(self.firstIndex(of: to)!, offsetBy: -1)
+        return String(self[fromIndex...toIndex])
+    }
+    
+    func sliceByString(from:String, to:String) -> String? {
+        //From - startIndex
+        var range = self.range(of: from)
+        let subString = String(self[range!.upperBound...])
+        
+        //To - endIndex
+        range = subString.range(of: to)
+        return String(subString[..<range!.lowerBound])
+    }
+    
+    func subString(from: Int, to: Int) -> String {
+        let startIndex = self.index(self.startIndex, offsetBy: from)
+        let endIndex = self.index(self.startIndex, offsetBy: to)
+        return String(self[startIndex...endIndex])
+    }
+    
+}
+//MARK:-
