@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ClockWise'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ClockWise.'
+  s.version          = '1.0.0'
+  s.summary          = 'ClockWise is a lightweight Swift utilities'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ClockWise is a lightweight Swift utilities that use the power of extension to add more functionality to UIKit and foundation API.
                        DESC
 
   s.homepage         = 'https://github.com/amrangry/ClockWise'
@@ -26,17 +26,21 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'amrangry' => 'amr.elghadban@gmail.com' }
   s.source           = { :git => 'https://github.com/amrangry/ClockWise.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/amr_elghadban'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'ClockWise/Classes/**/*'
-  
+  s.source_files = 'ClockWise/Source/**/*'
+  s.swift_version = '5.0'
+  s.platforms = {
+      "ios": "12.0"
+  }
   # s.resource_bundles = {
   #   'ClockWise' => ['ClockWise/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.frameworks = 'UIKit'
+   s.dependency 'Kingfisher', '~> 5.3.1'
+  
 end

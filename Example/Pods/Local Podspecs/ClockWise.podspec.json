@@ -1,8 +1,8 @@
 {
   "name": "ClockWise",
-  "version": "0.1.0",
-  "summary": "A short description of ClockWise.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0.0",
+  "summary": "ClockWise is a lightweight Swift utilities",
+  "description": "ClockWise is a lightweight Swift utilities that use the power of extension to add more functionality to UIKit and foundation API.",
   "homepage": "https://github.com/amrangry/ClockWise",
   "license": {
     "type": "MIT",
@@ -13,10 +13,19 @@
   },
   "source": {
     "git": "https://github.com/amrangry/ClockWise.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
+  "social_media_url": "https://twitter.com/amr_elghadban",
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
-  "source_files": "ClockWise/Classes/**/*"
+  "source_files": "ClockWise/Classes/**/*",
+  "swift_versions": "5.0",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Kingfisher": [
+      "~> 5.3.1"
+    ]
+  },
+  "swift_version": "5.0"
 }

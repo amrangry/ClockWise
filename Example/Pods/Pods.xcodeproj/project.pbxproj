@@ -13,10 +13,24 @@
 		5799BDEE55135C3CCE7472DD4486DFE3 /* Pods-ClockWise_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCBEB1A40CB5CAF61ECFA827AAAE3A5D /* Pods-ClockWise_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ED03CA40F21369E599F0165C52256DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6789F490E84192CF7A642DE9CF7B8E60 /* ClockWise-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD4F0C1CE15BCD653B5759D62AB0982 /* ClockWise-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8442B5B12462DF7F002CDB9B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */; };
+		8442B5B22462DF7F002CDB9B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */; };
+		8442B5B32462DF7F002CDB9B /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */; };
+		8442B5B42462DF7F002CDB9B /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */; };
+		8442B5B52462DF7F002CDB9B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */; };
+		8442B5B62462DF7F002CDB9B /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A52462DF7F002CDB9B /* UIViewEx.swift */; };
+		8442B5B72462DF7F002CDB9B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A62462DF7F002CDB9B /* UIViewController+Extension.swift */; };
+		8442B5B92462DF7F002CDB9B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5A82462DF7F002CDB9B /* UITableView+Extension.swift */; };
+		8442B5BA2462DF7F002CDB9B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AA2462DF7F002CDB9B /* Date+Extension.swift */; };
+		8442B5BB2462DF7F002CDB9B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AB2462DF7F002CDB9B /* Optional+Extension.swift */; };
+		8442B5BC2462DF7F002CDB9B /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AC2462DF7F002CDB9B /* DispatchQueue+Extension.swift */; };
+		8442B5BD2462DF7F002CDB9B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AD2462DF7F002CDB9B /* Bundle+Extension.swift */; };
+		8442B5BE2462DF7F002CDB9B /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AE2462DF7F002CDB9B /* Locale+Extension.swift */; };
+		8442B5BF2462DF7F002CDB9B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AF2462DF7F002CDB9B /* String+Extension.swift */; };
+		8442B5C02462DF7F002CDB9B /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */; };
 		928A145B50AE3FB14FC2821B8671D652 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		9AE808B8E3F3F7FE9D864C97C0A28E0F /* Pods-ClockWise_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1FD60FBA066F1A5DDC92E0F53F0D06 /* Pods-ClockWise_Example-dummy.m */; };
 		CD25CBBA3ECD0EEA2F3989D8E9C07C8E /* Pods-ClockWise_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DF34524A46A4AD3FF8621E8E6010834 /* Pods-ClockWise_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB1412BB76C3511C73D45F955384EA0C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B120A9E3590EB0E95075D83B2AF49F /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,34 +53,48 @@
 /* Begin PBXFileReference section */
 		0657CB5407B66622D1628D9891BED559 /* Pods-ClockWise_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClockWise_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		125906669DCB4F10383F0F784397E426 /* Pods-ClockWise_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		19B120A9E3590EB0E95075D83B2AF49F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = ClockWise/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		1B6979DF3EA614F5991E66B120463820 /* ClockWise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClockWise.debug.xcconfig; sourceTree = "<group>"; };
-		1C553F7AE89C9A7157A883ED9564D899 /* ClockWise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ClockWise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1C553F7AE89C9A7157A883ED9564D899 /* ClockWise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ClockWise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		231702DDAF44D8A590DBB3E9163D6162 /* Pods-ClockWise_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClockWise_Example-Info.plist"; sourceTree = "<group>"; };
 		2850BD33D92A09A6C96B39120FAD1669 /* Pods-ClockWise_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClockWise_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2DC3D1773E2A866AE545249F6B584E2A /* Pods_ClockWise_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClockWise_Tests.framework; path = "Pods-ClockWise_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DC3D1773E2A866AE545249F6B584E2A /* Pods_ClockWise_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClockWise_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F430697560564A29584E06DB3EB10FF /* Pods-ClockWise_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClockWise_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3094E330D5591C94C1B4CAB1F4969CC0 /* ClockWise-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClockWise-prefix.pch"; sourceTree = "<group>"; };
 		31CBF63A1CCC01416631569BFEFCD628 /* Pods-ClockWise_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClockWise_Tests-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4B6D5A30B02006AEDD05FA1CC42C1FEF /* Pods-ClockWise_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClockWise_Tests.modulemap"; sourceTree = "<group>"; };
-		4BF10095B73CF0B0D14D88CB29514F43 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4BF10095B73CF0B0D14D88CB29514F43 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4CD4F0C1CE15BCD653B5759D62AB0982 /* ClockWise-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClockWise-umbrella.h"; sourceTree = "<group>"; };
 		59B2B7D306788FAEEFB4A60A24831ADA /* ClockWise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ClockWise-dummy.m"; sourceTree = "<group>"; };
 		66D89E3F432667A5232D79A265A72FC5 /* Pods-ClockWise_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		720CB5411D092BF5B238ACF311916050 /* ClockWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ClockWise.framework; path = ClockWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		720CB5411D092BF5B238ACF311916050 /* ClockWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF34524A46A4AD3FF8621E8E6010834 /* Pods-ClockWise_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClockWise_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A52462DF7F002CDB9B /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
+		8442B5A62462DF7F002CDB9B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8442B5A82462DF7F002CDB9B /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AA2462DF7F002CDB9B /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AB2462DF7F002CDB9B /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AC2462DF7F002CDB9B /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AD2462DF7F002CDB9B /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AE2462DF7F002CDB9B /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
+		8442B5AF2462DF7F002CDB9B /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		890BF83EAB47EDD56683D5F4B772DA96 /* Pods-ClockWise_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8B00EB5A7C0BFCF975154524F6C18776 /* ClockWise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClockWise.release.xcconfig; sourceTree = "<group>"; };
 		9B7E6788A0828588A8031BCAE7776682 /* Pods-ClockWise_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClockWise_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E56CB74FC5F84DC7F0460F15FE37356 /* Pods-ClockWise_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A659CF4C1F20DA0E5C1E0719C3BFEE79 /* Pods-ClockWise_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClockWise_Tests-dummy.m"; sourceTree = "<group>"; };
 		A67FEFE45669BF7824A5C0048B722E20 /* ClockWise-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ClockWise-Info.plist"; sourceTree = "<group>"; };
 		CB1FD60FBA066F1A5DDC92E0F53F0D06 /* Pods-ClockWise_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClockWise_Example-dummy.m"; sourceTree = "<group>"; };
-		DB0399719909429806793352AC125E1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DB0399719909429806793352AC125E1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DEFC0F20C08D6EE630B4908438D52165 /* Pods-ClockWise_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClockWise_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E236F15A3E77B2757ECA3E644C656F01 /* Pods_ClockWise_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClockWise_Example.framework; path = "Pods-ClockWise_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E236F15A3E77B2757ECA3E644C656F01 /* Pods_ClockWise_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClockWise_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E757F0848AA4CB41485C65EA1953318F /* ClockWise.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ClockWise.modulemap; sourceTree = "<group>"; };
 		F35BE2529DB445BDEDCC1F4FCA30E6A9 /* Pods-ClockWise_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClockWise_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		FCBEB1A40CB5CAF61ECFA827AAAE3A5D /* Pods-ClockWise_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClockWise_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -123,6 +151,53 @@
 				38706DDADA8AFBFACBD9CE0B1544AC01 /* Pods-ClockWise_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8442B59D2462DEA7002CDB9B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8442B59E2462DF7F002CDB9B /* Extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8442B59E2462DF7F002CDB9B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8442B5A92462DF7F002CDB9B /* Foundation */,
+				8442B59F2462DF7F002CDB9B /* UIKit */,
+			);
+			name = Extensions;
+			path = ../../../../../MotoShop/Repo_MotoShop_iOS/MotoShop/Helper/Extensions;
+			sourceTree = "<group>";
+		};
+		8442B59F2462DF7F002CDB9B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8442B5A22462DF7F002CDB9B /* UIResponder+Extension.swift */,
+				8442B5A02462DF7F002CDB9B /* UIApplication+Extension.swift */,
+				8442B5A12462DF7F002CDB9B /* UIImageView+Extension.swift */,
+				8442B5A32462DF7F002CDB9B /* UIAlertController+Extension.swift */,
+				8442B5A42462DF7F002CDB9B /* UIColor+Extension.swift */,
+				8442B5A52462DF7F002CDB9B /* UIViewEx.swift */,
+				8442B5A62462DF7F002CDB9B /* UIViewController+Extension.swift */,
+				8442B5A82462DF7F002CDB9B /* UITableView+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		8442B5A92462DF7F002CDB9B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8442B5AF2462DF7F002CDB9B /* String+Extension.swift */,
+				8442B5AA2462DF7F002CDB9B /* Date+Extension.swift */,
+				8442B5AB2462DF7F002CDB9B /* Optional+Extension.swift */,
+				8442B5AC2462DF7F002CDB9B /* DispatchQueue+Extension.swift */,
+				8442B5AD2462DF7F002CDB9B /* Bundle+Extension.swift */,
+				8442B5AE2462DF7F002CDB9B /* Locale+Extension.swift */,
+				8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		91D2E760B6BED883EF1A22423D1CF2AD /* Products */ = {
@@ -207,7 +282,7 @@
 		F14FE1731222A2C1B17BD2C88199C7A5 /* ClockWise */ = {
 			isa = PBXGroup;
 			children = (
-				19B120A9E3590EB0E95075D83B2AF49F /* ReplaceMe.swift */,
+				8442B59D2462DEA7002CDB9B /* Source */,
 				BD065736D0CF9E45CA17818422ACA14F /* Pod */,
 				DB1D82A6329A4E16D7E91EB34346A479 /* Support Files */,
 			);
@@ -383,8 +458,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8442B5BF2462DF7F002CDB9B /* String+Extension.swift in Sources */,
+				8442B5B72462DF7F002CDB9B /* UIViewController+Extension.swift in Sources */,
+				8442B5BD2462DF7F002CDB9B /* Bundle+Extension.swift in Sources */,
+				8442B5BB2462DF7F002CDB9B /* Optional+Extension.swift in Sources */,
+				8442B5BA2462DF7F002CDB9B /* Date+Extension.swift in Sources */,
+				8442B5B22462DF7F002CDB9B /* UIImageView+Extension.swift in Sources */,
+				8442B5B42462DF7F002CDB9B /* UIAlertController+Extension.swift in Sources */,
+				8442B5BE2462DF7F002CDB9B /* Locale+Extension.swift in Sources */,
+				8442B5B12462DF7F002CDB9B /* UIApplication+Extension.swift in Sources */,
+				8442B5B62462DF7F002CDB9B /* UIViewEx.swift in Sources */,
+				8442B5B52462DF7F002CDB9B /* UIColor+Extension.swift in Sources */,
+				8442B5B92462DF7F002CDB9B /* UITableView+Extension.swift in Sources */,
+				8442B5B32462DF7F002CDB9B /* UIResponder+Extension.swift in Sources */,
+				8442B5C02462DF7F002CDB9B /* DateFormatter+Extension.swift in Sources */,
+				8442B5BC2462DF7F002CDB9B /* DispatchQueue+Extension.swift in Sources */,
 				3DF60339F80509131A4DDEAC1A1A76F1 /* ClockWise-dummy.m in Sources */,
-				FB1412BB76C3511C73D45F955384EA0C /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,8 +648,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
