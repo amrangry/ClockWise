@@ -15,21 +15,6 @@ public enum UIColorInputError: Error {
         mismatchedHexStringLength
 }
 
-//extension UIColor {
-//    static let tintColorGray = #colorLiteral(red: 0.3215414286, green: 0.3215840459, blue: 0.3215268254, alpha: 1)
-//    static let tintColor = UIColor(named: "tint_color") //#colorLiteral(red: 0.9921568627, green: 0.04705882353, blue: 0.007843137255, alpha: 1)
-//    static let tintColorLight = UIColor(named: "tint_color_light")
-//    static let secondary = UIColor.darkGray
-//    static let tintOpposite = UIColor.white
-//    static let fontColorPrimary = UIColor.white
-//    static let fontColorSecondary = UIColor(named: "font_color_secondary")
-//    static let fontColorSecondaryLight = UIColor(named: "font_color_secondary_light")
-//    static let fontButtonGrayColor = UIColor(named: "font_button_gray_color")
-//    static let approveColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-//    static let backgroundColor = #colorLiteral(red: 0.6729276193, green: 0.679590269, blue: 0.679590269, alpha: 1)
-//    static let darkTurquoise = UIColor(named: "DarkTurquoise")
-//}
-
 extension UIColor {
 
     // MARK: Creates a color from an hex int.
