@@ -137,7 +137,10 @@ extension UIColor {
             throw UIColorInputError.missingHashMarkAsPrefix
         }
     
-        let hexString: String = rgba.substring(from: rgba.index(rgba.startIndex, offsetBy: 1))
+        let index =  rgba.index(rgba.startIndex, offsetBy: 1)//String.Index
+        let hexStringSequance = rgba[index...]
+        let hexString = String(hexStringSequance)
+        //let hexString: String = rgba.substring(from: index) //deprecated
         var hexValue: UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
