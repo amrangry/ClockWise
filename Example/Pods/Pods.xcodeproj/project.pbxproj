@@ -28,6 +28,10 @@
 		8442B5BE2462DF7F002CDB9B /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AE2462DF7F002CDB9B /* Locale+Extension.swift */; };
 		8442B5BF2462DF7F002CDB9B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5AF2462DF7F002CDB9B /* String+Extension.swift */; };
 		8442B5C02462DF7F002CDB9B /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */; };
+		848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A61246498EB00534C48 /* LanguageHandler.swift */; };
+		848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A62246498EB00534C48 /* LanguageManager.swift */; };
+		848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A63246498EB00534C48 /* LanguageModel.swift */; };
+		848A6A682464991400534C48 /* AppLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A672464991400534C48 /* AppLanguages.swift */; };
 		928A145B50AE3FB14FC2821B8671D652 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		9AE808B8E3F3F7FE9D864C97C0A28E0F /* Pods-ClockWise_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1FD60FBA066F1A5DDC92E0F53F0D06 /* Pods-ClockWise_Example-dummy.m */; };
 		CD25CBBA3ECD0EEA2F3989D8E9C07C8E /* Pods-ClockWise_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DF34524A46A4AD3FF8621E8E6010834 /* Pods-ClockWise_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +88,10 @@
 		8442B5AE2462DF7F002CDB9B /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 		8442B5AF2462DF7F002CDB9B /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		848A6A61246498EB00534C48 /* LanguageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHandler.swift; sourceTree = "<group>"; };
+		848A6A62246498EB00534C48 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		848A6A63246498EB00534C48 /* LanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		848A6A672464991400534C48 /* AppLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguages.swift; sourceTree = "<group>"; };
 		890BF83EAB47EDD56683D5F4B772DA96 /* Pods-ClockWise_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8B00EB5A7C0BFCF975154524F6C18776 /* ClockWise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClockWise.release.xcconfig; sourceTree = "<group>"; };
 		9B7E6788A0828588A8031BCAE7776682 /* Pods-ClockWise_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClockWise_Example.modulemap"; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				8442B59E2462DF7F002CDB9B /* Extensions */,
+				848A6A59246497CC00534C48 /* Extra */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -198,6 +207,25 @@
 				8442B5B02462DF7F002CDB9B /* DateFormatter+Extension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		848A6A59246497CC00534C48 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				848A6A692464997700534C48 /* Language */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		848A6A692464997700534C48 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				848A6A672464991400534C48 /* AppLanguages.swift */,
+				848A6A61246498EB00534C48 /* LanguageHandler.swift */,
+				848A6A62246498EB00534C48 /* LanguageManager.swift */,
+				848A6A63246498EB00534C48 /* LanguageModel.swift */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 		91D2E760B6BED883EF1A22423D1CF2AD /* Products */ = {
@@ -461,17 +489,21 @@
 				8442B5BF2462DF7F002CDB9B /* String+Extension.swift in Sources */,
 				8442B5B72462DF7F002CDB9B /* UIViewController+Extension.swift in Sources */,
 				8442B5BD2462DF7F002CDB9B /* Bundle+Extension.swift in Sources */,
+				848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */,
 				8442B5BB2462DF7F002CDB9B /* Optional+Extension.swift in Sources */,
 				8442B5BA2462DF7F002CDB9B /* Date+Extension.swift in Sources */,
 				8442B5B22462DF7F002CDB9B /* UIImageView+Extension.swift in Sources */,
 				8442B5B42462DF7F002CDB9B /* UIAlertController+Extension.swift in Sources */,
+				848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */,
 				8442B5BE2462DF7F002CDB9B /* Locale+Extension.swift in Sources */,
 				8442B5B12462DF7F002CDB9B /* UIApplication+Extension.swift in Sources */,
 				8442B5B62462DF7F002CDB9B /* UIViewEx.swift in Sources */,
 				8442B5B52462DF7F002CDB9B /* UIColor+Extension.swift in Sources */,
+				848A6A682464991400534C48 /* AppLanguages.swift in Sources */,
 				8442B5B92462DF7F002CDB9B /* UITableView+Extension.swift in Sources */,
 				8442B5B32462DF7F002CDB9B /* UIResponder+Extension.swift in Sources */,
 				8442B5C02462DF7F002CDB9B /* DateFormatter+Extension.swift in Sources */,
+				848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */,
 				8442B5BC2462DF7F002CDB9B /* DispatchQueue+Extension.swift in Sources */,
 				3DF60339F80509131A4DDEAC1A1A76F1 /* ClockWise-dummy.m in Sources */,
 			);

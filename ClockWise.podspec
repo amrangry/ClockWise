@@ -40,7 +40,7 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'UIKit'
-   s.dependency 'Kingfisher', '~> 5.3.1'
+  # s.frameworks = 'UIKit'
+  # s.dependency 'Kingfisher', '~> 5.3.1'
   
 end
