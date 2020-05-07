@@ -30,11 +30,14 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'ClockWise/Source/**/*'
+  #s.source_files = 'ScreenCaptureDetector/Classes/**/*'
+  #s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Source/**/*'
   s.swift_version = '5.0'
   s.platforms = {
       "ios": "12.0"
   }
+
   # s.resource_bundles = {
   #   'ClockWise' => ['ClockWise/Assets/*.png']
   # }
