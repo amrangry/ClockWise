@@ -3,9 +3,9 @@ use_frameworks!
 target 'ClockWise_Example' do
    pod 'ClockWise', :path => '../'
    # CodeSmell
-   pod 'SwiftLint', '~> 0.36.0' , :inhibit_warnings => true
+  # pod 'SwiftLint', '~> 0.36.0' , :inhibit_warnings => true
    # Helper
-   pod 'Kingfisher' , '~> 5.3.1' , :inhibit_warnings => true
+   # pod 'Kingfisher' , '~> 5.3.1' , :inhibit_warnings => true
    
   target 'ClockWise_Tests' do
     inherit! :search_paths
