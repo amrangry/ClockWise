@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     // UIAlertController.alert("Login Error", message: errorObj.localizedDescription).action("OK").presentOn(self)
     static func alert(title: String, message: String, completion: (() -> Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

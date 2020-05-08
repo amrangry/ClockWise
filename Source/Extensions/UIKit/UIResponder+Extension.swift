@@ -7,7 +7,7 @@
 //
 import UIKit
 
-extension  UIResponder {
+public extension  UIResponder {
     static var reusableIdentifier: String {
         return String(describing: self)
     }

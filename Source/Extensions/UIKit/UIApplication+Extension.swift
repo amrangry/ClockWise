@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     
     /// you have the key window
     var currentWindow: UIWindow? {

@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct LanguageModel {
+public struct LanguageModel {
     let id: Int?
     let code: String?
     let name: String?
 }
 
-extension LanguageModel {
+public extension LanguageModel {
     static let arabic = LanguageModel(id: 2, code: "ar", name: "عربي")
     static let english = LanguageModel(id: 1, code: "en", name: "English")
 }

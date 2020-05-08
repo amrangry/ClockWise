@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Locale {
+public extension Locale {
     static var preferredLanguageCode: String {
         let defaultLanguage = "en"
         let preferredLanguage = preferredLanguages.first ?? defaultLanguage

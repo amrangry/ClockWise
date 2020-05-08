@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     
     @objc func specialLocalizedString(key: String, value: String?, table tableName: String?) -> String {
         let currentLanguage = LanguageManager.shared.currentAppleLanguage()
@@ -23,7 +23,7 @@ extension Bundle {
     }
 }
 
-extension Bundle {
+public extension Bundle {
     var releaseVersionNumber: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
     }

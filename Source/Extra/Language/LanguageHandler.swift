@@ -13,17 +13,17 @@ private let languageUserDefaults = "languageUserDefaults"
 private let currentLanguageUserDefaults = "currentLanguageUserDefaults"
 private let currentDirectionUserDefaults = "currentDirectionUserDefaults"
 
-enum Language: Int {
+public enum Language: Int {
     case english = 0
     case arabic = 1
 }
 
-enum Direction: Int {
+public enum Direction: Int {
     case ltr = 0
     case rtl = 1
 }
 
-class LanguageHandler: NSObject {
+public class LanguageHandler: NSObject {
     
     // singlton implementation
     static var shared = LanguageHandler()
@@ -84,7 +84,7 @@ class LanguageHandler: NSObject {
 
 // MARK: Helper Prefered methods
 
-extension LanguageHandler {
+public extension LanguageHandler {
     
     func getSupportedLanguages() -> [LanguageModel] {
         let arabicLang = LanguageModel.arabic

@@ -35,7 +35,7 @@ import Foundation
 
 // ==================== Swift ==================== //
 
-final class Singleton {
+final public class Singleton {
 
     ///shared varible
     public static let sharedInstance: Singleton = Singleton()
@@ -44,7 +44,7 @@ final class Singleton {
 
 }
 
-func runMe() {
+public func runMe() {
     struct InnerScope {
         static let closure: Void = {
             print("Once")
@@ -61,7 +61,7 @@ func runMe() {
 
 // ==================== Dispatch Extension ==================== //
 
-extension DispatchQueue {
+public extension DispatchQueue {
     
     // OnceTokens should be Unique Keys, So please use UUIDs insted of Ints
     // Thanks to AbuZeid Ibrahim for mention this point :)

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {    
+public extension UIView {
     class func initFromNib() -> Self {
        func instanceFromNib<T: UIView>() -> T {
           let view = UINib(nibName: reusableIdentifier, bundle: nil).instantiate(withOwner: nil, options: nil).first as! T //swiftlint:disable:this force_cast
@@ -19,7 +19,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func shadow(add: Bool) {
         if add {
             layer.shadowColor = UIColor.gray.cgColor//backgroundColor.cgColor
@@ -33,7 +33,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     
     @available(iOS 11.0, *)
     var corners: CACornerMask {

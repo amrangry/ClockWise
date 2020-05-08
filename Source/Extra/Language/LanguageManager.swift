@@ -10,7 +10,7 @@ import Foundation
 
 
 
-class LanguageManager {
+public class LanguageManager {
     
     static let shared = LanguageManager()
     

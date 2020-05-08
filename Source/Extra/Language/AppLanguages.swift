@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum AppLanguages: String {
+public enum AppLanguages: String {
     case en, ar
 }

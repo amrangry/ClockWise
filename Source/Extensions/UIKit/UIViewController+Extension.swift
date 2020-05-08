@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     /// load view controller FromNib
     ///
     /// - Returns: instance object of viewcontroller

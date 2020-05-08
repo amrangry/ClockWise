@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     
     func trim() -> String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
@@ -149,7 +149,7 @@ extension String {
 
 // MARK: - Localization
 
-extension String {
+public extension String {
     
     var localized: String {
         let langKey = LanguageHandler.shared.getCurrentLanguageCode()
@@ -170,7 +170,7 @@ extension String {
 
 // MARK: - static  methods
 
-extension String {
+public extension String {
     static func stringToDate(_ str: String, formatterString: String?) -> Date? {
         let formatter = DateFormatter()
         var format = formatterString ?? ""
@@ -208,7 +208,7 @@ extension String {
     
 }
 
-extension String {
+public extension String {
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -222,7 +222,7 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {
@@ -238,7 +238,7 @@ extension String {
 }
 
 //Personal Name Splitter
-extension String {
+public extension String {
     /// let name =  "Mr. Steven Paul Jobs Jr."
     /// personNameComponents requires iOS (10.0 and later)
     @available(iOS 10.0, *)
@@ -311,7 +311,7 @@ extension String {
         return (firstName, lastName)
     }
     
-    public var uppercasedFirstCharacterNew: String {
+    var uppercasedFirstCharacterNew: String {
         if count > 0 {
             let splitIndex = index(after: startIndex)
             let firstCharacter = self[..<splitIndex].uppercased()
@@ -381,7 +381,7 @@ private extension String {
     }
 }
 
-extension String {
+public extension String {
     // LEFT
     // Returns the specified number of chars from the left of the string
     // let str = "Hello"
