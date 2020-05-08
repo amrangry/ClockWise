@@ -10,6 +10,7 @@ ClockWise is a lightweight Swift utilities
 [![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 [![License](https://img.shields.io/cocoapods/l/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 [![Platform](https://img.shields.io/cocoapods/p/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
+![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
 
 ## Example
 
@@ -19,6 +20,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### CocoaPods
 ClockWise is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -26,6 +28,28 @@ it, simply add the following line to your Podfile:
 pod 'ClockWise'
 ```
 https://cocoapods.org/pods/ClockWise
+
+### Manually
+To install manually the ClockWise classes in your app, just drag the Source class files (demo files and assets are not needed) into your project.
+
+## Usage
+1. Import `ClockWise` module to your `Swift` class
+```swift
+    import ClockWise
+```
+2. Enjoy
+
+## Supported OS & SDK Versions
+
+* Supported build target - iOS 10.0 and later (Xcode 11.x)
+
+#### Apps using ClockWise
+
+- [MotoShop](https://itunes.apple.com/ua/app/).
+
+#### Let us know!
+
+We’d be really happy if you sent us links to your projects where you use our component. Just send an email to amr.elghadban@adkatech.com And do let us know if you have any questions or suggestion regards.
 
 ## Author
 
