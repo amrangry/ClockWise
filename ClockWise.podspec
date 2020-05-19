@@ -23,6 +23,8 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
 
   s.homepage         = 'https://github.com/amrangry/ClockWise'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  # s.screenshots  = 'https://raw.githubusercontent.com/antonyraphel/ARCarMovement/30b4fa26fc4f14abaef5da147544db8d558b1c18/screenshot/image-1.png'
+
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'amrangry' => 'amr.elghadban@gmail.com' }
   s.source           = { :git => 'https://github.com/amrangry/ClockWise.git', :tag => s.version.to_s }
@@ -44,6 +46,7 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'Foundation'
   # s.dependency 'Kingfisher', '~> 5.3.1'
   
 end
