@@ -1,10 +1,3 @@
-<p align="center">
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
-</p>
-
-# ClockWise
-
-ClockWise is a lightweight Swift utilities 
 
 [![CI Status](https://img.shields.io/travis/amrangry/ClockWise.svg?style=flat)](https://travis-ci.org/amrangry/ClockWise)
 [![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
@@ -19,6 +12,15 @@ ClockWise is a lightweight Swift utilities
 ![GitHub forks](https://img.shields.io/github/forks/amrangry/ClockWise?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/amrangry/ClockWise?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
+
+<p align="center">
+  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+</p>
+
+# ClockWise
+
+ClockWise is a lightweight Swift utilities 
+
 
 ## Example
 
