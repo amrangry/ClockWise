@@ -12,6 +12,8 @@ ClockWise is a lightweight Swift utilities
 [![Platform](https://img.shields.io/cocoapods/p/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amrangry/ClockWise) ![GitHub last commit](https://img.shields.io/github/last-commit/amrangry/ClockWise) ![GitHub tag (latest SemVer)]
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
