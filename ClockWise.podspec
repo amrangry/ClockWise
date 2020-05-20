@@ -28,6 +28,7 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'amrangry' => 'amr.elghadban@gmail.com' }
   s.source           = { :git => 'https://github.com/amrangry/ClockWise.git', :tag => s.version.to_s }
+  #s.documentation_url = 'https://clockwise.github.io'
   s.social_media_url = 'https://twitter.com/amr_elghadban'
 
   s.ios.deployment_target = '12.0'
