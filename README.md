@@ -41,6 +41,8 @@ https://cocoapods.org/pods/ClockWise
 ### Manually
 To install manually the ClockWise classes in your app, just drag the Source class files (demo files and assets are not needed) into your project.
 
+Add content of folder Source/* to your project
+
 ## Usage
 1. Import `ClockWise` module to your `Swift` class
 ```swift
