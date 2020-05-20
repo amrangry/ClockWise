@@ -38,6 +38,13 @@ pod 'ClockWise'
 ```
 https://cocoapods.org/pods/ClockWise
 
+### Swift Package Manager (SPM)
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler. To integrate using Apple's Swift package manager from xcode :
+
+File -> Swift Packages -> Add Package Dependency...
+
+enter package URL : https://github.com/amrangry/ClockWise.git , choose the latest release
+
 ### Manually
 To install manually the ClockWise classes in your app, just drag the Source class files (demo files and assets are not needed) into your project.
 
