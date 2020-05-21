@@ -13,6 +13,13 @@
 		5799BDEE55135C3CCE7472DD4486DFE3 /* Pods-ClockWise_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCBEB1A40CB5CAF61ECFA827AAAE3A5D /* Pods-ClockWise_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ED03CA40F21369E599F0165C52256DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6789F490E84192CF7A642DE9CF7B8E60 /* ClockWise-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD4F0C1CE15BCD653B5759D62AB0982 /* ClockWise-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84538BBC247713C80028CBD0 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BBB247713C80028CBD0 /* UIAlertAction+Extension.swift */; };
+		84538BC12477143D0028CBD0 /* RTLUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BBD2477143D0028CBD0 /* RTLUICollectionViewFlowLayout.swift */; };
+		84538BC22477143D0028CBD0 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BBE2477143D0028CBD0 /* UIView+Animation.swift */; };
+		84538BC32477143D0028CBD0 /* UIView+Semantic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BBF2477143D0028CBD0 /* UIView+Semantic.swift */; };
+		84538BC42477143D0028CBD0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC02477143D0028CBD0 /* UIView+Extension.swift */; };
+		84538BC7247714EE0028CBD0 /* Array+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC5247714EE0028CBD0 /* Array+Extesion.swift */; };
+		84538BC8247714EE0028CBD0 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC6247714EE0028CBD0 /* Double+Extension.swift */; };
 		848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A61246498EB00534C48 /* LanguageHandler.swift */; };
 		848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A62246498EB00534C48 /* LanguageManager.swift */; };
 		848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A63246498EB00534C48 /* LanguageModel.swift */; };
@@ -74,6 +81,13 @@
 		66D89E3F432667A5232D79A265A72FC5 /* Pods-ClockWise_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClockWise_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		720CB5411D092BF5B238ACF311916050 /* ClockWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF34524A46A4AD3FF8621E8E6010834 /* Pods-ClockWise_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClockWise_Tests-umbrella.h"; sourceTree = "<group>"; };
+		84538BBB247713C80028CBD0 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
+		84538BBD2477143D0028CBD0 /* RTLUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTLUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		84538BBE2477143D0028CBD0 /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		84538BBF2477143D0028CBD0 /* UIView+Semantic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Semantic.swift"; sourceTree = "<group>"; };
+		84538BC02477143D0028CBD0 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		84538BC5247714EE0028CBD0 /* Array+Extesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extesion.swift"; sourceTree = "<group>"; };
+		84538BC6247714EE0028CBD0 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		848A6A61246498EB00534C48 /* LanguageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHandler.swift; sourceTree = "<group>"; };
 		848A6A62246498EB00534C48 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		848A6A63246498EB00534C48 /* LanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
@@ -206,8 +220,13 @@
 				848A6A6E2464A8B500534C48 /* UIApplication+Extension.swift */,
 				848A6A702464A8B500534C48 /* UIResponder+Extension.swift */,
 				848A6A712464A8B500534C48 /* UIAlertController+Extension.swift */,
+				84538BBB247713C80028CBD0 /* UIAlertAction+Extension.swift */,
 				848A6A722464A8B500534C48 /* UIColor+Extension.swift */,
 				848A6A732464A8B500534C48 /* UIViewEx.swift */,
+				84538BBD2477143D0028CBD0 /* RTLUICollectionViewFlowLayout.swift */,
+				84538BBE2477143D0028CBD0 /* UIView+Animation.swift */,
+				84538BC02477143D0028CBD0 /* UIView+Extension.swift */,
+				84538BBF2477143D0028CBD0 /* UIView+Semantic.swift */,
 				848A6A742464A8B500534C48 /* UIViewController+Extension.swift */,
 				848A6A752464A8B500534C48 /* UITableView+Extension.swift */,
 				84E0F2552472C33900F10CD1 /* UIImage+Extension.swift */,
@@ -218,6 +237,8 @@
 		848A6A762464A8B500534C48 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				84538BC5247714EE0028CBD0 /* Array+Extesion.swift */,
+				84538BC6247714EE0028CBD0 /* Double+Extension.swift */,
 				848A6A772464A8B500534C48 /* Date+Extension.swift */,
 				848A6A782464A8B500534C48 /* Optional+Extension.swift */,
 				848A6A792464A8B500534C48 /* DispatchQueue+Extension.swift */,
@@ -496,19 +517,26 @@
 				848A6A842464A8B500534C48 /* UIViewController+Extension.swift in Sources */,
 				848A6A8A2464A8B500534C48 /* Locale+Extension.swift in Sources */,
 				848A6A892464A8B500534C48 /* Bundle+Extension.swift in Sources */,
+				84538BC32477143D0028CBD0 /* UIView+Semantic.swift in Sources */,
 				848A6A8B2464A8B500534C48 /* String+Extension.swift in Sources */,
 				848A6A832464A8B500534C48 /* UIViewEx.swift in Sources */,
+				84538BC22477143D0028CBD0 /* UIView+Animation.swift in Sources */,
 				848A6A812464A8B500534C48 /* UIAlertController+Extension.swift in Sources */,
 				848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */,
 				84E0F2562472C33900F10CD1 /* UIImage+Extension.swift in Sources */,
+				84538BBC247713C80028CBD0 /* UIAlertAction+Extension.swift in Sources */,
 				848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */,
+				84538BC7247714EE0028CBD0 /* Array+Extesion.swift in Sources */,
 				848A6A882464A8B500534C48 /* DispatchQueue+Extension.swift in Sources */,
 				848A6A682464991400534C48 /* AppLanguages.swift in Sources */,
+				84538BC42477143D0028CBD0 /* UIView+Extension.swift in Sources */,
+				84538BC8247714EE0028CBD0 /* Double+Extension.swift in Sources */,
 				848A6A872464A8B500534C48 /* Optional+Extension.swift in Sources */,
 				848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */,
 				848A6A7E2464A8B500534C48 /* UIApplication+Extension.swift in Sources */,
 				848A6A802464A8B500534C48 /* UIResponder+Extension.swift in Sources */,
 				3DF60339F80509131A4DDEAC1A1A76F1 /* ClockWise-dummy.m in Sources */,
+				84538BC12477143D0028CBD0 /* RTLUICollectionViewFlowLayout.swift in Sources */,
 				84F8054E24755D35002CC416 /* MutableCollection+Extension.swift in Sources */,
 				848A6A862464A8B500534C48 /* Date+Extension.swift in Sources */,
 				848A6A822464A8B500534C48 /* UIColor+Extension.swift in Sources */,
