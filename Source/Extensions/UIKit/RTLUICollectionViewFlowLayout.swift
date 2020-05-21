@@ -10,7 +10,7 @@ import UIKit
 
 public class RTLUICollectionViewFlowLayout: UICollectionViewFlowLayout {
     
-    override var flipsHorizontallyInOppositeLayoutDirection: Bool {
+    public override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return true
     }
     
@@ -19,7 +19,7 @@ public class RTLUICollectionViewFlowLayout: UICollectionViewFlowLayout {
 //    }
     
     // when ever the bounds change, call layoutAttributesForElementsInRect:
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
