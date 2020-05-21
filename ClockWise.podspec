@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ClockWise'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'ClockWise is a lightweight Swift utilities'
 
 # This description is used to generate tags and improve search results.
