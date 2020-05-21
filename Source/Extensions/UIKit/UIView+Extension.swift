@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     func makeShadow(_ color: UIColor = UIColor.black) {
         // add the shadow to the base view

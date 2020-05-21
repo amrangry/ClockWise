@@ -8,7 +8,7 @@
 
 import UIKit
 //KVC called titleTextColor. This KVC allows you to set exactly what you need, the color for the UIAlertAction text.
-extension UIAlertAction {
+public extension UIAlertAction {
     var titleTextColor: UIColor? {
         get {
             return self.value(forKey: "titleTextColor") as? UIColor

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     func object(at index: Int) -> Element? {
         guard self.isEmpty == false, index >= 0, index < self.count else { return nil }
         let element = self[index]

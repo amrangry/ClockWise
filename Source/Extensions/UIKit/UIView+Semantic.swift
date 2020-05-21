@@ -16,7 +16,7 @@ import UIKit
 //
 //}
 
-extension UIView {
+public extension UIView {
     
     func alignLanguage() {
         let langDirection = LanguageHandler.shared.currentDirection

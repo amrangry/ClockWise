@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     func shakeAnimation(completion: (() -> Void)?) {
         let keyFrame = CAKeyframeAnimation(keyPath: "position")
         let point = self.layer.position

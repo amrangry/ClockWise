@@ -15,7 +15,7 @@ public extension Date {
 }
 
 //  Created by AmrAngry on 3/1/20.
-extension Date {
+public extension Date {
     // credit to @eirnym, adapted this from their OBJC code: https://gist.github.com/eirnym/c9526a045556e4d8464b41a367843e3c
     // generates a random date and time in the past, limited by daysBack (a number of days before today)
     // also generates a random time to go with that date.
@@ -38,7 +38,7 @@ extension Date {
     }
 }
 
-extension Date {
+public extension Date {
     
     func toString(using format: String? = "E d MMM yyyy") -> String? {
         let formatter = DateFormatter()
