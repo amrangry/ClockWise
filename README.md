@@ -1,15 +1,14 @@
 
 [![CI Status](https://img.shields.io/travis/amrangry/ClockWise.svg?style=flat)](https://travis-ci.org/amrangry/ClockWise)
-[![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
-[![License](https://img.shields.io/cocoapods/l/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
+[![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise))
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
-
 [![Platform](https://img.shields.io/cocoapods/p/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
-![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amrangry/ClockWise) 
-![GitHub last commit](https://img.shields.io/github/last-commit/amrangry/ClockWise)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/amrangry/ClockWise?sort=semver) 
 ![](https://img.shields.io/badge/Platform-iOS-orange) <img src="https://img.shields.io/badge/minimum%20iOS%20version-10-red"> 
+![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
+[![License](https://img.shields.io/cocoapods/l/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amrangry/ClockWise) 
+![GitHub last commit](https://img.shields.io/github/last-commit/amrangry/ClockWise)
 ![GitHub forks](https://img.shields.io/github/forks/amrangry/ClockWise?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/amrangry/ClockWise?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
