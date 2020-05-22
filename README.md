@@ -66,6 +66,16 @@ Add content of folder Source/* to your project
 
 * Supported build target - iOS 10.0 and later (Xcode 11.x)
 
+## Lib Versions
+
+this project adheres to [Semantic versioning](https://semver.org/)
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+- MAJOR version when you make incompatible API changes,
+- MINOR version when you add functionality in a backwards compatible manner, and
+- PATCH version when you make backwards compatible bug fixes.
+
 #### Apps using ClockWise
 
 - [MotoShop](https://itunes.apple.com/ua/app/).
