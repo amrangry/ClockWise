@@ -2,6 +2,8 @@
 [![CI Status](https://img.shields.io/travis/amrangry/ClockWise.svg?style=flat)](https://travis-ci.org/amrangry/ClockWise)
 [![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 [![License](https://img.shields.io/cocoapods/l/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+
 [![Platform](https://img.shields.io/cocoapods/p/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amrangry/ClockWise) 
