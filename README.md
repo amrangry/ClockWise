@@ -26,13 +26,13 @@ ClockWise is a lightweight Swift utilities
 
 
 ## Table of Contents
-* [Getting Started](#getting-started)
+* [Getting Started](##getting-started-installation)
     - [CocoaPods](#CocoaPods)
-    - [Swift Package Manager (SPM)](#Swift Package Manager (SPM))
+    - [Swift Package Manager (SPM)](#swift-package-manager-spm)
     - [Manually](#Manually)
-* [How it works "Usage"](#How it works "Usage")
+* [How it works "Usage"](##how-it-works-usage)
 * [Exmple](#Example)
-* [Supported OS & SDK Versions](#Supported OS & SDK Versions)
+* [Supported OS & SDK Versions](#supported-os--sdk-versions)
 * [Versioning](#Versioning)
 * [TODO](#todo)
 * [Contributing](#contributing)
@@ -40,6 +40,7 @@ ClockWise is a lightweight Swift utilities
     - [Feedback](#feedback)
 * [CHANGELOG](#changelog)
 * [Related Projects](#related-projects)
+* [Author](#Author)
 * [License](#license)
 
 ## Getting Started "Installation"
@@ -133,6 +134,8 @@ We’d be really happy if you sent us links to your projects where you use our c
 ## Author
 
 amrangry, amr.elghadban@gmail.com
+[![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
+[![Linkedin](https://img.shields.io/badge/Linkein.blue.svg)](https://www.linkedin.com/in/amrelghadban/)
 
 ## License
 
