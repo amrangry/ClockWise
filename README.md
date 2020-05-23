@@ -1,6 +1,12 @@
 
+# ClockWise
+
+<p align="center">
+  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+</p>
+
 [![CI Status](https://img.shields.io/travis/amrangry/ClockWise.svg?style=flat)](https://travis-ci.org/amrangry/ClockWise)
-[![License](https://img.shields.io/cocoapods/l/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/amrangry/ClockWise/blob/master/LICENSE)
 
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)](https://cocoapods.org/pods/ClockWise) [![Version](https://img.shields.io/cocoapods/v/ClockWise.svg?style=flat)](https://cocoapods.org/pods/ClockWise)
 
@@ -17,9 +23,7 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
 
-<p align="center">
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
-</p>
+
 
 # ClockWise
 
