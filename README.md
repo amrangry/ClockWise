@@ -133,9 +133,11 @@ We’d be really happy if you sent us links to your projects where you use our c
 
 ## Author
 
-amrangry, amr.elghadban@gmail.com
+AmrAngry, <a href="amr.elghadban@gmail.com">amr.elghadban@gmail.com</a>
+
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
-[![Linkedin](https://img.shields.io/badge/Linkein.blue.svg)](https://www.linkedin.com/in/amrelghadban/)
+
+[![Linkedin](https://img.shields.io/badge/Linkedin.blue.svg)](https://www.linkedin.com/in/amrelghadban/)
 
 ## License
 
