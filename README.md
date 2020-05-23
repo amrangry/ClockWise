@@ -137,7 +137,8 @@ AmrAngry, <a href="amr.elghadban@gmail.com">amr.elghadban@gmail.com</a>
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
 
-[![Linkedin](https://img.shields.io/badge/Linkedin.blue.svg)](https://www.linkedin.com/in/amrelghadban/)
+[![Linkedin](https://img.shields.io/badge/Lets%20Connect%20via-LinkedIn-blue)](https://www.linkedin.com/in/amrelghadban/)
+
 
 ## License
 
