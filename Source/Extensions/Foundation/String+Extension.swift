@@ -209,6 +209,7 @@ public extension String {
 }
 
 public extension String {
+    
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -220,9 +221,11 @@ public extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return ceil(boundingBox.width)
     }
+    
 }
 
 public extension String {
+    
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {
@@ -235,6 +238,7 @@ public extension String {
     func isHtmlString() -> Bool {
         return contains("</div>") || contains("</font>") || contains("</html>") || contains("</strong>") || contains("<img")
     }
+    
 }
 
 //Personal Name Splitter
@@ -463,4 +467,3 @@ public extension String {
     }
     
 }
-//MARK:-

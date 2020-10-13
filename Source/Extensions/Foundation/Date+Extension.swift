@@ -9,9 +9,11 @@
 import Foundation
 
 public extension Date {
+    
     func dayNumberOfWeek() -> Int? {
         return Calendar.current.dateComponents([.weekday], from: self).weekday
     }
+    
 }
 
 //  Created by AmrAngry on 3/1/20.
@@ -36,6 +38,7 @@ public extension Date {
         let randomDate = gregorian?.date(byAdding: offsetComponents, to: today, options: .init(rawValue: 0) )
         return randomDate
     }
+    
 }
 
 public extension Date {
@@ -222,4 +225,5 @@ public extension Date {
         let day = calendar.ordinality(of: .day, in: .year, for: self)
         return Double(day ?? 1)
     }
+    
 }

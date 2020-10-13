@@ -21,9 +21,11 @@ public extension Bundle {
         }
         return bundle.specialLocalizedString(key: key, value: value, table: tableName)
     }
+    
 }
 
 public extension Bundle {
+    
     var releaseVersionNumber: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
     }
@@ -51,4 +53,5 @@ public extension Bundle {
     var buildVersionNumberPretty: String {
         return "\(buildVersionNumber ?? "1")"
     }
+    
 }

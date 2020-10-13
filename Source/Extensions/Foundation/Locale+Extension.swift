@@ -9,6 +9,7 @@
 import Foundation
 
 public extension Locale {
+    
     static var preferredLanguageCode: String {
         let defaultLanguage = "en"
         let preferredLanguage = preferredLanguages.first ?? defaultLanguage
@@ -20,4 +21,5 @@ public extension Locale {
     static var preferredLanguageCodes: [String] {
         return Locale.preferredLanguages.compactMap({Locale(identifier: $0).languageCode})
     }
+    
 }

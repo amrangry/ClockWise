@@ -8,6 +8,7 @@
 import Foundation
 
 public extension MutableCollection where Index == Int {
+    
     mutating func shuffle() {
         if count <= 1 { return }
         for i in 0..<count - 1 {
@@ -15,4 +16,5 @@ public extension MutableCollection where Index == Int {
             swapAt(i, j)
         }
     }
+    
 }

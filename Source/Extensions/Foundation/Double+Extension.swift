@@ -42,6 +42,7 @@ public extension Double {
         let roundedString = numberFormatter.string(from: number)
         return roundedString
     }
+    
 }
 
 /*

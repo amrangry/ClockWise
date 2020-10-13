@@ -9,12 +9,15 @@
 import Foundation
 
 public extension Optional {
+    
     func isNil() -> Bool {
         self == nil
     }
+    
 }
 
 public extension Optional where Wrapped == Bool {
+    
     func isTrue() -> Bool {
         self == true
     }
@@ -22,10 +25,13 @@ public extension Optional where Wrapped == Bool {
     func isFalse() -> Bool {
         self == false
     }
+    
 }
 
 public extension Optional where Wrapped: Collection {
+    
     func isNilOrEmpty() -> Bool {
         self == nil || self?.isEmpty == true
     }
+    
 }
