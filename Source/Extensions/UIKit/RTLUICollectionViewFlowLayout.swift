@@ -5,10 +5,9 @@
 //  Created by Amr Elghadban (AmrAngry) Apple on 7/7/19.
 //  Copyright © 2019 adka. All rights reserved.
 //
-
 import UIKit
 
-public class RTLUICollectionViewFlowLayout: UICollectionViewFlowLayout {
+open class RTLUICollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     public override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return true
