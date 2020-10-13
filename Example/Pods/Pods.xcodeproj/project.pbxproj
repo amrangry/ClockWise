@@ -29,7 +29,7 @@
 		848A6A802464A8B500534C48 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A702464A8B500534C48 /* UIResponder+Extension.swift */; };
 		848A6A812464A8B500534C48 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A712464A8B500534C48 /* UIAlertController+Extension.swift */; };
 		848A6A822464A8B500534C48 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A722464A8B500534C48 /* UIColor+Extension.swift */; };
-		848A6A832464A8B500534C48 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A732464A8B500534C48 /* UIViewEx.swift */; };
+		848A6A832464A8B500534C48 /* UIView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A732464A8B500534C48 /* UIView+UI.swift */; };
 		848A6A842464A8B500534C48 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A742464A8B500534C48 /* UIViewController+Extension.swift */; };
 		848A6A852464A8B500534C48 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A752464A8B500534C48 /* UITableView+Extension.swift */; };
 		848A6A862464A8B500534C48 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A772464A8B500534C48 /* Date+Extension.swift */; };
@@ -98,7 +98,7 @@
 		848A6A702464A8B500534C48 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		848A6A712464A8B500534C48 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		848A6A722464A8B500534C48 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		848A6A732464A8B500534C48 /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
+		848A6A732464A8B500534C48 /* UIView+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UI.swift"; sourceTree = "<group>"; };
 		848A6A742464A8B500534C48 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		848A6A752464A8B500534C48 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		848A6A772464A8B500534C48 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -228,11 +228,11 @@
 				848A6A702464A8B500534C48 /* UIResponder+Extension.swift */,
 				848A6A752464A8B500534C48 /* UITableView+Extension.swift */,
 				84538BBE2477143D0028CBD0 /* UIView+Animation.swift */,
+				848A6A732464A8B500534C48 /* UIView+UI.swift */,
 				84538BC02477143D0028CBD0 /* UIView+Extension.swift */,
 				84538BBF2477143D0028CBD0 /* UIView+Semantic.swift */,
 				5D3428612535C62E000EA0F3 /* UIView+NIB.swift */,
 				848A6A742464A8B500534C48 /* UIViewController+Extension.swift */,
-				848A6A732464A8B500534C48 /* UIViewEx.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -522,7 +522,7 @@
 				848A6A892464A8B500534C48 /* Bundle+Extension.swift in Sources */,
 				84538BC32477143D0028CBD0 /* UIView+Semantic.swift in Sources */,
 				848A6A8B2464A8B500534C48 /* String+Extension.swift in Sources */,
-				848A6A832464A8B500534C48 /* UIViewEx.swift in Sources */,
+				848A6A832464A8B500534C48 /* UIView+UI.swift in Sources */,
 				84538BC22477143D0028CBD0 /* UIView+Animation.swift in Sources */,
 				848A6A812464A8B500534C48 /* UIAlertController+Extension.swift in Sources */,
 				848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */,

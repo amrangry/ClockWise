@@ -5,19 +5,7 @@
 //  Created by ADKATech.com on 3/13/18.
 //  Copyright © 2018 ADKATech.com All rights reserved.
 //
-
-import Foundation
 import UIKit
-
-public extension UIView {
-    class func initFromNib() -> Self {
-       func instanceFromNib<T: UIView>() -> T {
-          let view = UINib(nibName: reusableIdentifier, bundle: nil).instantiate(withOwner: nil, options: nil).first as! T //swiftlint:disable:this force_cast
-          return view
-       }
-       return instanceFromNib()
-    }
-}
 
 public extension UIView {
     func shadow(add: Bool) {
