@@ -1,6 +1,6 @@
 //
 //  UIAlertAction+Extension.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by AmrAngry on 3/26/20.
 //  Copyright © 2020 adka. All rights reserved.

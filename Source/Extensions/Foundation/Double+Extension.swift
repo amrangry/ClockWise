@@ -1,6 +1,6 @@
 //
 //  Double+Extension.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by AmrAngry on 9/21/19.
 //  Copyright © 2019 adka. All rights reserved.

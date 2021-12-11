@@ -1,5 +1,5 @@
 //
-//  Array+Extesion.swift
+//  Array+Extension.swift
 //  Restaurant
 //
 //  Created by Amr Elghadban (AmrAngry) on 7/17/19.

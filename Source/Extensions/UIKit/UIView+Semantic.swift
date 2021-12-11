@@ -1,6 +1,6 @@
 //
 //  UIView+Semantic.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by Amr Elghadban on 4/21/19.
 //  Copyright © 2019 adka. All rights reserved.

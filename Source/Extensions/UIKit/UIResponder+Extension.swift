@@ -1,6 +1,6 @@
 //
 //  UIResponder+Extension.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by Amr Elghadban on 3/23/19.
 //  Copyright © 2019 ADKATech.com All rights reserved.

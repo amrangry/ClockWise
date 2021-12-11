@@ -1,6 +1,6 @@
 //
 //  UIViewController+Extension.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by Amr Elghadban on 4/8/19.
 //  Copyright © 2019 ADKATech.com All rights reserved.
@@ -12,7 +12,7 @@ import UIKit
 public extension UIViewController {
     /// load view controller FromNib
     ///
-    /// - Returns: instance object of viewcontroller
+    /// - Returns: instance object of view controller
     class func loadFromNib<T: UIViewController>() -> T {
         return T(nibName: reusableIdentifier, bundle: nil)
     }

@@ -1,6 +1,6 @@
 //
 //  RTLUICollectionViewFlowLayout.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by Amr Elghadban (AmrAngry) Apple on 7/7/19.
 //  Copyright © 2019 adka. All rights reserved.

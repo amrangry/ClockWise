@@ -1,6 +1,6 @@
 //
 //  UIView+Extension.swift
-//  Resturant
+//  Restaurant
 //
 //  Created by Amr Elghadban (AmrAngry) on 7/17/19.
 //  Copyright © 2019 adka. All rights reserved.
