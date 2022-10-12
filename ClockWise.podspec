@@ -40,11 +40,18 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
   s.platforms = {
       "ios": "12.0"
   }
+   #s.platform = :ios, '11.0'
+   #s.requires_arc = true
 
   # s.resource_bundles = {
   #   'ClockWise' => ['ClockWise/Assets/*.png']
   # }
-
+  #Ref : https://github.com/hyperoslo/BarcodeScanner.git
+#   s.resource_bundles = {
+#     'BarcodeScanner' => ['Images/*.{png}'],
+#     'Localization' => ['Localization/*.lproj/Localizable.strings']
+#   }
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit'
   s.frameworks = 'UIKit', 'Foundation'
