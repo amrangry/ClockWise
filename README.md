@@ -25,10 +25,10 @@ ClockWise is a lightweight Swift utilities
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
 
 
-#Simplified iOS Utilities
+# Simplified iOS Utilities
 This is a collection of utilities I used in many projects, the Simplified suite of products and code bases for iOS.
 
-#Objectives
+# Objectives
 Generality: the classes and functions should be general-purpose enough to be used independently of the product they are used in.
 Absolutely no third party dependencies: we want to be able to use this module anywhere without any additional requirements.
 Testability: every utility should be easily unit-testable.
