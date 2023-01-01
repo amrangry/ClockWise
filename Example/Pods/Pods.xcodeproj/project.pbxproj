@@ -21,8 +21,7 @@
 		84538BC42477143D0028CBD0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC02477143D0028CBD0 /* UIView+Extension.swift */; };
 		84538BC7247714EE0028CBD0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC5247714EE0028CBD0 /* Array+Extension.swift */; };
 		84538BC8247714EE0028CBD0 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84538BC6247714EE0028CBD0 /* Double+Extension.swift */; };
-		848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A61246498EB00534C48 /* LanguageHandler.swift */; };
-		848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A62246498EB00534C48 /* LanguageManager.swift */; };
+		848A6A64246498EB00534C48 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A61246498EB00534C48 /* LanguageManager.swift */; };
 		848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A63246498EB00534C48 /* LanguageModel.swift */; };
 		848A6A682464991400534C48 /* AppLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A672464991400534C48 /* AppLanguages.swift */; };
 		848A6A7E2464A8B500534C48 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A6A6E2464A8B500534C48 /* UIApplication+Extension.swift */; };
@@ -90,8 +89,7 @@
 		84538BC02477143D0028CBD0 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		84538BC5247714EE0028CBD0 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		84538BC6247714EE0028CBD0 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		848A6A61246498EB00534C48 /* LanguageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHandler.swift; sourceTree = "<group>"; };
-		848A6A62246498EB00534C48 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		848A6A61246498EB00534C48 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		848A6A63246498EB00534C48 /* LanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		848A6A672464991400534C48 /* AppLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguages.swift; sourceTree = "<group>"; };
 		848A6A6E2464A8B500534C48 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -200,8 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				848A6A672464991400534C48 /* AppLanguages.swift */,
-				848A6A61246498EB00534C48 /* LanguageHandler.swift */,
-				848A6A62246498EB00534C48 /* LanguageManager.swift */,
+				848A6A61246498EB00534C48 /* LanguageManager.swift */,
 				848A6A63246498EB00534C48 /* LanguageModel.swift */,
 			);
 			path = Language;
@@ -525,7 +522,7 @@
 				848A6A832464A8B500534C48 /* UIView+UI.swift in Sources */,
 				84538BC22477143D0028CBD0 /* UIView+Animation.swift in Sources */,
 				848A6A812464A8B500534C48 /* UIAlertController+Extension.swift in Sources */,
-				848A6A64246498EB00534C48 /* LanguageHandler.swift in Sources */,
+				848A6A64246498EB00534C48 /* LanguageManager.swift in Sources */,
 				84E0F2562472C33900F10CD1 /* UIImage+Extension.swift in Sources */,
 				84538BBC247713C80028CBD0 /* UIAlertAction+Extension.swift in Sources */,
 				848A6A66246498EB00534C48 /* LanguageModel.swift in Sources */,
@@ -536,7 +533,6 @@
 				84538BC42477143D0028CBD0 /* UIView+Extension.swift in Sources */,
 				84538BC8247714EE0028CBD0 /* Double+Extension.swift in Sources */,
 				848A6A872464A8B500534C48 /* Optional+Extension.swift in Sources */,
-				848A6A65246498EB00534C48 /* LanguageManager.swift in Sources */,
 				848A6A7E2464A8B500534C48 /* UIApplication+Extension.swift in Sources */,
 				848A6A802464A8B500534C48 /* UIResponder+Extension.swift in Sources */,
 				3DF60339F80509131A4DDEAC1A1A76F1 /* ClockWise-dummy.m in Sources */,
