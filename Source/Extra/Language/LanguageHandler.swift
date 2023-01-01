@@ -25,7 +25,7 @@ public enum Direction: Int {
 
 public class LanguageHandler: NSObject {
     
-    // singlton implementation
+    // singleton implementation
     static var shared = LanguageHandler()
     
     private override init() {
@@ -42,7 +42,7 @@ public class LanguageHandler: NSObject {
     }
     
     var currentLanguageModel: LanguageModel {
-        if self.currentLanguage == .english { // on for englush
+        if self.currentLanguage == .english { // on for English
             return LanguageModel.english
         } else { // off arabic
             return LanguageModel.arabic

@@ -37,7 +37,7 @@ import Foundation
 
 final public class Singleton {
 
-    ///shared varible
+    ///shared Variable
     public static let sharedInstance: Singleton = Singleton()
 
     private init() { }

@@ -18,18 +18,18 @@ public class LanguageManager {
     
     /// get current Apple language
     func currentAppleLanguage() -> AppLanguages {
-//        let userdef = UserDefaults.standard
-//        guard let langArray = userdef.object(forKey: Keys.appleLanguages.rawValue) as? [String] else {return .en}
+//        let userDefault = UserDefaults.standard
+//        guard let langArray = userDefault.object(forKey: Keys.appleLanguages.rawValue) as? [String] else {return .en}
 //        guard let current = langArray.first else {return .en}
 //        guard let currentLang = AppLanguages(rawValue: current) else { return .en }
         return .en
     }
     
-    /// set @lang to be the first in Applelanguages list
-    func setAppleLAnguageTo(lang: AppLanguages) {
-//        let userdef = UserDefaults.standard
-//        userdef.set([lang.rawValue, currentAppleLanguage().rawValue], forKey: Keys.appleLanguages.rawValue)
-//        userdef.synchronize()
+    /// set @lang to be the first in Apple languages list
+    func setAppLanguageTo(lang: AppLanguages) {
+//        let userDefault = UserDefaults.standard
+//        userDefault.set([lang.rawValue, currentAppleLanguage().rawValue], forKey: Keys.appleLanguages.rawValue)
+//        userDefault.synchronize()
     }
     
 }
