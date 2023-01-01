@@ -152,7 +152,7 @@ public extension String {
 public extension String {
     
     var localized: String {
-        let langKey = LanguageHandler.shared.getCurrentLanguageCode()
+        let langKey = LanguageManager.shared.getCurrentLanguageCode()
         var bundle: Bundle?
         if let localizationFilePath = Bundle.main.path(forResource: langKey, ofType: "lproj"), let localizedBundle = Bundle(path: localizationFilePath) {
             bundle = localizedBundle

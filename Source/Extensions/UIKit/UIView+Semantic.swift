@@ -20,7 +20,7 @@ import UIKit
 public extension UIView {
     
     func alignLanguage() {
-        let langDirection = LanguageHandler.shared.currentDirection
+        let langDirection = LanguageManager.shared.currentDirection
         changeToDirection(langDirection)
     }
     //swiftlint:disable:next cyclomatic_complexity
@@ -66,7 +66,7 @@ public extension UIView {
             case let searchBar as UISearchBar:
                 handleUISearchBarDirection(direction, searchBar: searchBar)
             case let tableViewCell as UITableViewCell:
-                let langDirection = LanguageHandler.shared.currentDirection
+                let langDirection = LanguageManager.shared.currentDirection
                 tableViewCell.changeToDirection(langDirection)
             case let image as UIImageView:
                 if image.tag == 200 {
@@ -148,7 +148,7 @@ public extension UIView {
     
     func checkSubViews(view: UIView) {
         if !view.subviews.isEmpty {
-            view.changeToDirection(LanguageHandler.shared.currentDirection)
+            view.changeToDirection(LanguageManager.shared.currentDirection)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  LanguageHandler.swift
+//  LanguageManager.swift
 //  test
 //
 //  Created by Karim Mousa on 1/27/18.
