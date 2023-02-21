@@ -9,6 +9,9 @@
 import UIKit
 // user defaults
 
+//Showing Recent Messages
+//Build input files cannot be found: '/Users/amr/Workspace2021/Amr/ADKA/ADKATech_Github_Repos/AseerAlkotob_BookJuice/repo/AseerAlkotob_BookJuice_iOS/Pods/ClockWise/Source/Extra/Language/AppLanguages.swift', '/Users/amr/Workspace2021/Amr/ADKA/ADKATech_Github_Repos/AseerAlkotob_BookJuice/repo/AseerAlkotob_BookJuice_iOS/Pods/ClockWise/Source/Extensions/Foundation/Locale+Extension.swift', '/Users/amr/Workspace2021/Amr/ADKA/ADKATech_Github_Repos/AseerAlkotob_BookJuice/repo/AseerAlkotob_BookJuice_iOS/Pods/ClockWise/Source/Extra/Language/LanguageModel.swift'. Did you forget to declare these files as outputs of any script phases or custom build rules which produce them?
+
 private let languageUserDefaults = "languageUserDefaults"
 private let currentLanguageUserDefaults = "currentLanguageUserDefaults"
 private let currentDirectionUserDefaults = "currentDirectionUserDefaults"
