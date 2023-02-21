@@ -23,8 +23,11 @@ public extension UIView {
         let langDirection = LanguageManager.shared.currentDirection
         changeToDirection(langDirection)
     }
+    
+    //Changes semantic to all views
+    //this hack needs in case of languages with different semantics: leftToRight(en/uk) & rightToLeft(ar)
     //swiftlint:disable:next cyclomatic_complexity
-    func changeToDirection(_ direction: Direction) {
+    func changeToDirection(_ direction: AppDirection) {
         
         if direction == .rtl {
             self.semanticContentAttribute = .forceRightToLeft
@@ -78,17 +81,17 @@ public extension UIView {
         }
     }
     
-    private func handleUISearchBarDirection(_ direction: Direction, searchBar: UISearchBar) {
+    private func handleUISearchBarDirection(_ direction: AppDirection, searchBar: UISearchBar) {
         if let searchTextField: UITextField = searchBar.value(forKey: "_searchField") as? UITextField {
             if direction == .rtl {
                 searchTextField.textAlignment = .right
             } else {
                 searchTextField.textAlignment = .left
             }
-        } 
+        }
     }
     
-    private func handleUILabelDirection(_ direction: Direction, label: UILabel) {
+    private func handleUILabelDirection(_ direction: AppDirection, label: UILabel) {
         if label.textAlignment == .center { return }
         if direction == .rtl {
             label.textAlignment = .right
@@ -97,7 +100,7 @@ public extension UIView {
         }
     }
     
-    private func handleUITextFieldDirection(_ direction: Direction, textField: UITextField) {
+    private func handleUITextFieldDirection(_ direction: AppDirection, textField: UITextField) {
         if textField.textAlignment == .center { return }
         if direction == .rtl {
             textField.textAlignment = .right
@@ -106,7 +109,7 @@ public extension UIView {
         }
     }
     
-    private func handleUITextViewDirection(_ direction: Direction, textView: UITextView) {
+    private func handleUITextViewDirection(_ direction: AppDirection, textView: UITextView) {
         if textView.textAlignment == .center { return }
         if direction == .rtl {
             textView.textAlignment = .right
@@ -115,7 +118,7 @@ public extension UIView {
         }
     }
     
-    private func handleUIButtonDirection(_ direction: Direction, button: UIButton) {
+    private func handleUIButtonDirection(_ direction: AppDirection, button: UIButton) {
         if button.contentHorizontalAlignment == .center { return }
         let titleInsets = button.titleEdgeInsets
         let imageInsets = button.imageEdgeInsets
@@ -152,3 +155,4 @@ public extension UIView {
         }
     }
 }
+

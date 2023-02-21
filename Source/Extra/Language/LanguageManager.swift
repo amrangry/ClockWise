@@ -2,8 +2,8 @@
 //  LanguageManager.swift
 //  test
 //
-//  Created by Karim Mousa on 1/27/18.
-//  Copyright © 2018 Karim Mousa. All rights reserved.
+//  Created by Amr Elghadban on 04/01/2023.
+//  Copyright © 2023 ADKATech.com All rights reserved.
 //
 
 import UIKit
@@ -14,36 +14,154 @@ private let currentLanguageUserDefaults = "currentLanguageUserDefaults"
 private let currentDirectionUserDefaults = "currentDirectionUserDefaults"
 private let appleLanguageKey = "AppleLanguages"
 
-public enum Language: Int {
-    case english = 0
-    case arabic = 1
+public enum AppDirection: Int {
+    case ltr = 1
+    case rtl = 2
+    
+    public var value: Int {
+        self.rawValue
+    }
+    
+    public var code: String {
+        switch self {
+        case .ltr:
+            return "ltr"//"LTR"
+        case .rtl:
+            return "rtl"//"RTL"
+        }
+    }
+    
+   public static func retrieve(forLanguageCode code: String) -> AppDirection? {
+        switch code {
+        case AppLanguage.english.code:
+            return .ltr
+        case AppLanguage.arabic.code:
+            return .rtl
+        default:
+            return nil
+        }
+    }
 }
 
-public enum Direction: Int {
-    case ltr = 0
-    case rtl = 1
+public enum AppLanguage: Int {
+    
+    case english = 1
+    case arabic = 2
+    
+    public var value: Int {
+        self.rawValue
+    }
+    
+    public var code: String {
+        switch self {
+        case .english:
+            return "en"
+        case .arabic:
+            return "ar"
+        }
+    }
+    
+    public var localizedName: String {
+        switch self {
+        case .english:
+            return "English"
+        case .arabic:
+            return "عربي"
+        }
+    }
+    
+    public var direction: AppDirection {
+        switch self {
+        case .english:
+            return AppDirection.ltr
+        case .arabic:
+            return AppDirection.rtl
+        }
+    }
+    
+    public func convert() -> LanguageModel {
+        LanguageModel.make(for: self)
+    }
+    
+    public static func retrieve(for code: String) -> AppLanguage? {
+        switch code {
+        case AppLanguage.english.code:
+            return .english
+        case AppLanguage.arabic.code:
+            return .arabic
+        default:
+            return nil
+        }
+    }
+
+}
+
+public struct LanguageModel {
+    public let id: Int?
+    public let code: String?
+    public let name: String?
+    public let direction: AppDirection?
+    
+    public static func make(for appLanguage: AppLanguage) -> LanguageModel {
+        LanguageModel(id: appLanguage.value, code: appLanguage.code, name: appLanguage.localizedName, direction: appLanguage.direction)
+    }
+}
+
+public extension LanguageModel {
+    static let english = LanguageModel.make(for: AppLanguage.english)
+    static let arabic = LanguageModel.make(for: AppLanguage.arabic)
 }
 
 public class LanguageManager: NSObject {
     
+    
     // singleton implementation
-    static var shared = LanguageManager()
+    public static var shared = LanguageManager()
+    public static let imageFlipFlag = 200
+    var userDefaults: UserDefaults
     
     private override init() {
-        userDefaults = UserDefaults.standard//UserDefaults(suiteName: languageUserDefaults)!
+        let code = LanguageManager.preferredLanguageCode
+        
+        userDefaults = UserDefaults(suiteName: languageUserDefaults)!
         let savedLangId = userDefaults.integer(forKey: currentLanguageUserDefaults)
         let savedDirection = userDefaults.integer(forKey: currentDirectionUserDefaults)
         
-        let languageId = Language(rawValue: savedLangId) ?? .english
-        self.currentLanguage = languageId
+        var language: AppLanguage
+        if let value = AppLanguage(rawValue: savedLangId) {
+            language = value
+        } else {
+            if let value = AppLanguage.retrieve(for: code) {
+                language = value
+            } else {
+                language = .english
+            }
+        }
+        currentLanguage = language
         
-        let direction = Direction(rawValue: savedDirection) ?? .ltr
-        self.currentDirection = direction
+        var direction: AppDirection
+        if let value = AppDirection(rawValue: savedDirection) {
+            direction = value
+        } else {
+            if let value = AppDirection.retrieve(forLanguageCode: code) {
+                direction = value
+            } else {
+                direction = .ltr
+            }
+        }
+        currentDirection = direction
+        
+        /* using cache method as the willSet and didSet will not be called while invoked from init of object*/
+        LanguageManager.cache(value: language.value, key: currentLanguageUserDefaults, userDefaults: userDefaults)
+        LanguageManager.cache(value: direction.value, key: currentDirectionUserDefaults, userDefaults: userDefaults)
     }
     
-    var userDefaults: UserDefaults
+    public static var preferredLanguageCode: String {
+        let preferred = Locale.preferredLanguageCode
+        return preferred
+    }
     
-    var currentLanguageModel: LanguageModel {
+    public var currentLanguageModel: LanguageModel {
         if self.currentLanguage == .english { // on for English
             return LanguageModel.english
         } else { // off arabic
@@ -51,41 +169,64 @@ public class LanguageManager: NSObject {
         }
     }
     
-    var currentLanguage: Language {
+    public var currentLanguage: AppLanguage {
         willSet {
-            let defaults: UserDefaults = UserDefaults(suiteName: languageUserDefaults)!
-            defaults.set(newValue.rawValue, forKey: currentLanguageUserDefaults)
-            defaults.synchronize()
+            let defaults = UserDefaults(suiteName: languageUserDefaults)
+            let value = newValue.rawValue
+            LanguageManager.cache(value: value, key: currentLanguageUserDefaults, userDefaults: defaults)
         }
     }
     
-    var currentDirection: Direction {
-        willSet {
-            let defaults: UserDefaults = UserDefaults(suiteName: languageUserDefaults)!
-            defaults.set(newValue.rawValue, forKey: currentDirectionUserDefaults)
-            defaults.synchronize()
+    public var currentDirection: AppDirection {
+        didSet {
+            let defaults = UserDefaults(suiteName: languageUserDefaults)!
+            let value = currentDirection.value
+            LanguageManager.cache(value: value, key: currentDirectionUserDefaults, userDefaults: defaults)
         }
     }
     
-    var localizedResourcesBundle: Bundle {
-        let lang: String = (currentLanguage == .arabic) ? "ar" : "en"
-        let bundlePath: String = Bundle.main.path(forResource: lang, ofType: "lproj")!
-        let bundle = Bundle(path: bundlePath)!
-        return bundle
+    private static func cache(value: Any, key: String, userDefaults: UserDefaults?) {
+        userDefaults?.set(value, forKey: key)
+        userDefaults?.synchronize()
+    }
+    
+    public var localizedBundle: Bundle {
+        Bundle.localizedBundle
+    }
+    
+    func localizedValue(forKey key: String) -> String {
+        localizedBundle.localizedString(forKey: key, value: "\(key)", table: nil)
+        //NSLocalizedString(self, tableName: tableName, bundle: .main, value: self, comment: "")
     }
     
     func localizedNameForResourceWithName(_ resourceName: String) -> String {
-        return "\(resourceName)_" + ((self.currentDirection == .rtl) ? "RTL" : "LTR")
+        "\(resourceName)_" + currentDirection.code//((self.currentDirection == .rtl) ? "RTL" : "LTR")
     }
     
-    func stringForKey(_ key: String) -> String {
-        return self.localizedResourcesBundle.localizedString(forKey: key, value: "\(key)", table: nil)
+    func localized(_ key: String, bundle: Bundle = .main, tableName: String = "Localizable") -> String {
+        //return NSLocalizedString(self, comment: "")
+        let value = NSLocalizedString(key, tableName: tableName, bundle: .main, value: key, comment: "")
+        return value
     }
     
+//    var localizedImage: UIImage? {
+//        return localizedImage()
+//            ?? localizedImage(type: ".png")
+//            ?? localizedImage(type: ".jpg")
+//            ?? localizedImage(type: ".jpeg")
+//            ?? UIImage(named: self)
+//    }
+//
+//    private func localizedImage(type: String = "") -> UIImage? {
+//        guard let imagePath = Bundle.localizedBundle.path(forResource: self, ofType: type) else {
+//            return nil
+//        }
+//        return UIImage(contentsOfFile: imagePath)
+//    }
+
 }
 
 // MARK: Helper Preferred methods
-
 public extension LanguageManager {
     
     func getSupportedLanguages() -> [LanguageModel] {
@@ -94,19 +235,14 @@ public extension LanguageManager {
         let languageList = [englishLang, arabicLang]
         return languageList
     }
-
-    func getPreferredLanguageCodePreferred() -> String {
-        let preferred = Bundle.main.preferredLocalizations.first ?? "en"
-        return preferred
-    }
     
-    func getCurrentLanguageCode() -> String {
-        let code = (currentLanguage == .arabic) ? "ar" : "en"
+    func getCurrentLanguage() -> String {
+        let code = currentLanguage.code
         return code
     }
     
-    func configureAppLanguage(_ code: String) {
-        if code == "en" {
+    func configureLanguage(_ code: String) {
+        if code == AppLanguage.english.code {
             currentLanguage = .english
             currentDirection = .ltr
         } else {
@@ -115,22 +251,22 @@ public extension LanguageManager {
         }
         userDefaults.set([code], forKey: appleLanguageKey)
         userDefaults.synchronize()
-        debugPrint(Locale.autoupdatingCurrent.identifier)
+        
+        //change language in the app
+        //the language will be changed after restart
+        UserDefaults.standard.set([code], forKey: appleLanguageKey)
+        UserDefaults.standard.synchronize()
     }
     
-    /// get current Apple language
-    func currentAppleLanguage() -> AppLanguages {
-        guard let langArray = userDefaults.object(forKey: appleLanguageKey) as? [String] else { return .en }
-        guard let current = langArray.first else { return .en }
-        guard let currentLang = AppLanguages(rawValue: current) else { return .en }
-        return currentLang
+    func configureAppLanguage(_ object: LanguageModel) {
+        guard let code = object.code else { return }
+        configureLanguage(code)
     }
     
-    /// set @lang to be the first in Apple languages list
-    func setAppLanguageTo(lang: AppLanguages) {
-        userDefaults.set([lang.rawValue, currentAppleLanguage().rawValue], forKey: appleLanguageKey)
-        userDefaults.synchronize()
-    }
+    
+    //appLanguageSettings
+    //launch to app settings is the best way to allow user to switch language to your app
+  
 }
 
 ///**

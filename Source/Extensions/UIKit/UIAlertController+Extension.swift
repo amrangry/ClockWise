@@ -12,7 +12,7 @@ public extension UIAlertController {
     // UIAlertController.alert("Login Error", message: errorObj.localizedDescription).action("OK").presentOn(self)
     static func alert(title: String, message: String, completion: (() -> Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok".localized(), style: .default) { (_) in
+        let action = UIAlertAction(title: "Ok".localized, style: .default) { (_) in
             completion?()
         }
         alert.addAction(action)
@@ -22,7 +22,7 @@ public extension UIAlertController {
     func alert(title: String, message: String, completion: (() -> Void)?) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok".localized(), style: .default) { (_) in
+        let action = UIAlertAction(title: "Ok".localized, style: .default) { (_) in
             completion?()
         }
         alert.addAction(action)
@@ -47,7 +47,7 @@ public extension UIAlertController {
     func show(title: String, message: String) {
         self.title = title
         self.message = message
-        let alertAction = UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
+        let alertAction = UIAlertAction(title: "OK".localized, style: .default, handler: { action in
             switch action.style {
             case .default:
                 debugPrint("default")
@@ -63,11 +63,11 @@ public extension UIAlertController {
         self.show()
     }
     
-    func show(title: String, message: String, okAction okActionHanlder: ((UIAlertAction) -> Void)?, cancelAction cancelActionHanlder: ((UIAlertAction) -> Void)?) {
+    func show(title: String, message: String, okAction okActionHandler: ((UIAlertAction) -> Void)?, cancelAction cancelActionHandler: ((UIAlertAction) -> Void)?) {
         self.title = title
         self.message = message
-        self.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: okActionHanlder))
-        self.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: cancelActionHanlder))
+        self.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: okActionHandler))
+        self.addAction(UIAlertAction(title: "Cancel".localized, style: .default, handler: cancelActionHandler))
         self.show()
     }
     

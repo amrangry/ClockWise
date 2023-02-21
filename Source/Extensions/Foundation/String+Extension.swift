@@ -147,27 +147,6 @@ public extension String {
     
 }
 
-// MARK: - Localization
-
-public extension String {
-    
-    var localized: String {
-        let langKey = LanguageManager.shared.getCurrentLanguageCode()
-        var bundle: Bundle?
-        if let localizationFilePath = Bundle.main.path(forResource: langKey, ofType: "lproj"), let localizedBundle = Bundle(path: localizationFilePath) {
-            bundle = localizedBundle
-        }
-        let value = localized(bundle: bundle ?? .main)//NSLocalizedString(self, tableName: "Localizable", bundle: bundle, value: self, comment: "")
-        return value
-    }
-    
-    func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
-        //return NSLocalizedString(self, comment: "")
-        let value = NSLocalizedString(self, tableName: tableName, bundle: .main, value: self, comment: "")
-        return value
-    }
-}
-
 // MARK: - static  methods
 
 public extension String {

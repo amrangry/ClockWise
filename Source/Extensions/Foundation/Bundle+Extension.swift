@@ -10,22 +10,6 @@ import Foundation
 
 public extension Bundle {
     
-    @objc func specialLocalizedString(key: String, value: String?, table tableName: String?) -> String {
-        let currentLanguage = LanguageManager.shared.currentAppleLanguage()
-        var bundle: Bundle
-        if let path = Bundle.main.path(forResource: currentLanguage.rawValue, ofType: "lproj") {
-            bundle = Bundle(path: path)!
-        } else {
-            let path = Bundle.main.path(forResource: "Base", ofType: "lproj")!
-            bundle = Bundle(path: path)!
-        }
-        return bundle.specialLocalizedString(key: key, value: value, table: tableName)
-    }
-    
-}
-
-public extension Bundle {
-    
     var releaseVersionNumber: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
     }
@@ -55,3 +39,4 @@ public extension Bundle {
     }
     
 }
+
