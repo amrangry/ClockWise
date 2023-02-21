@@ -36,7 +36,7 @@ ClockWise is a lightweight Swift utilities that use the power of extension to ad
   #s.source_files = 'ScreenCaptureDetector/Classes/**/*'
   #s.source_files = 'Source/**/*.swift'
   #s.source_files = 'Source/**/*'
-  s.source_files = 'Source/*'
+  s.source_files = 'Source/**/*'
   s.swift_version = '5.0'
   s.platforms = {
       "ios": "12.0"

@@ -180,7 +180,8 @@
 		8442B59D2462DEA7002CDB9B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				848A6A6C2464A8B500534C48 /* Extensions */,
+				848A6A762464A8B500534C48 /* Foundation */,
+				848A6A6D2464A8B500534C48 /* UIKit */,
 				848A6A59246497CC00534C48 /* Extra */,
 			);
 			path = Source;
@@ -203,15 +204,6 @@
 				C5300F922968926100C13C1D /* String+Extension+Language.swift */,
 			);
 			path = Language;
-			sourceTree = "<group>";
-		};
-		848A6A6C2464A8B500534C48 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				848A6A762464A8B500534C48 /* Foundation */,
-				848A6A6D2464A8B500534C48 /* UIKit */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		848A6A6D2464A8B500534C48 /* UIKit */ = {
