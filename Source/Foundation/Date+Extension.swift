@@ -44,9 +44,21 @@ public extension Date {
 public extension Date {
     
     func toString(using format: String? = "E d MMM yyyy") -> String? {
+        toString(using: format, for: .current)
+    }
+    
+    func toString(using format: String? = "E d MMM yyyy", for timeZone: TimeZone? = TimeZone.current) -> String? {
         let formatter = DateFormatter()
         formatter.dateFormat = format
-        formatter.timeZone = TimeZone.current // TimeZone(abbreviation: "UTC")
+        formatter.timeZone = timeZone //TimeZone.current // TimeZone(abbreviation: "UTC") // TimeZone(secondsFromGMT: 0)
+        return formatter.string(from: self)
+    }
+    
+    func toString(using format: String? = "E d MMM yyyy", for timeZone: TimeZone? = TimeZone.current, and local: Locale? = Locale(identifier: "en_US_POSIX")) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.timeZone = timeZone  //TimeZone.current // TimeZone(abbreviation: "UTC") // TimeZone(secondsFromGMT: 0)
+        formatter.locale = local//Locale(identifier: "en_US_POSIX")
         return formatter.string(from: self)
     }
     
