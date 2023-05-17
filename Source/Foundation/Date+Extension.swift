@@ -73,7 +73,6 @@ public extension Date {
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.timeZone = TimeZone.current // TimeZone(abbreviation: "UTC")
         return formatter.string(from: self)
-        
     }
     
     var day: Double {
