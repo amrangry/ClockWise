@@ -11,7 +11,7 @@ import Foundation
 ///
 ///  ` iOS Dev Techies ` 🔥
 ///
-///  Video 1 : ` Singletone and dispatch_once `
+///  Video 1 : ` Singletons and dispatch_once `
 ///
 
 // ==================== Objective C ==================== //
