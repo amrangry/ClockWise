@@ -150,6 +150,7 @@ public extension String {
 // MARK: - static  methods
 
 public extension String {
+    
     static func stringToDate(_ str: String, formatterString: String?) -> Date? {
         let formatter = DateFormatter()
         var format = formatterString ?? ""
