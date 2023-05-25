@@ -226,7 +226,7 @@ public extension String {
     /// let name =  "Mr. Steven Paul Jobs Jr."
     /// personNameComponents requires iOS (10.0 and later)
     @available(iOS 10.0, *)
-    func splitName() -> (String, String) {
+    func splitName() -> (first: String, last: String) {
         let name = self
         var firstName = name
         var lastName = ""
