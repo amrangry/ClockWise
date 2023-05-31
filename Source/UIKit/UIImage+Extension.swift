@@ -55,6 +55,36 @@ public extension UIImage {
         return nil
     }
     
+    func compress(maxSizeInKB: Int) -> Data? {
+        // Compress the image to reduce the file size
+        guard var resizedData = self.jpegData(compressionQuality: 1.0) else {
+            return nil
+        }
+        
+        // Check if the compressed image size is within the specified limit
+        let maxSizeInBytes = maxSizeInKB * 1024
+        var compressionQuality: CGFloat = 1.0
+        while resizedData.count > maxSizeInBytes && compressionQuality > 0.0 {
+            compressionQuality -= 0.1
+            if let newResizedData = self.jpegData(compressionQuality: compressionQuality) {
+                resizedData = newResizedData
+            }
+        }
+        
+        // Create a new UIImage from the compressed data
+        //UIImage(data: resizedData)
+        return resizedData
+    }
+    
+    func resizeImage(targetSize: CGSize) -> UIImage? {
+        // Resize the image to the target size
+        UIGraphicsBeginImageContextWithOptions(targetSize, false, 1.0)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: targetSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage
+    }
+    
     //image compression
     func resizeImage() -> UIImage {
         var actualHeight: Float = Float(self.size.height)
