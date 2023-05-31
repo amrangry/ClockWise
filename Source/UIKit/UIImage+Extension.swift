@@ -27,9 +27,7 @@ public extension UIImage {
         //  UIImagePNGRepresentation
         self.jpegData(compressionQuality: quality.rawValue)
     }
-    
-    
-    
+
     /// Not recommended to use
     /// - Parameter expectedSizeInMb: expectedSizeInMb description
     /// - Returns: UIImage
@@ -96,6 +94,7 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return UIImage(data: imageData!)!
     }
+    
 }
 
 /// 'Image size quality compression, very close to WeChat picture compression strategy'
