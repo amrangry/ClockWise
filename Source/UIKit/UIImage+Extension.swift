@@ -31,13 +31,13 @@ public extension UIImage {
     /// Not recommended to use
     /// - Parameter expectedSizeInMb: expectedSizeInMb description
     /// - Returns: UIImage
-    func compressTo(_ expectedSizeInMb:Int) -> UIImage? {
+    func compressTo(_ expectedSizeInMb: Int) -> UIImage? {
         let sizeInBytes = expectedSizeInMb * 1024 * 1024
-        var needCompress:Bool = true
-        var imgData:Data?
-        var compressingValue:CGFloat = 1.0
+        var needCompress: Bool = true
+        var imgData: Data?
+        var compressingValue: CGFloat = 1.0
         while (needCompress && compressingValue > 0.0) {
-            if let data:Data = self.jpegData(compressionQuality: compressingValue) {
+            if let data: Data = self.jpegData(compressionQuality: compressingValue) {
                 if data.count < sizeInBytes {
                     needCompress = false
                     imgData = data
@@ -56,9 +56,9 @@ public extension UIImage {
     }
     
     //image compression
-    func resizeImage(image: UIImage) -> UIImage {
-        var actualHeight: Float = Float(image.size.height)
-        var actualWidth: Float = Float(image.size.width)
+    func resizeImage() -> UIImage {
+        var actualHeight: Float = Float(self.size.height)
+        var actualWidth: Float = Float(self.size.width)
         let maxHeight: Float = 841 //A4 default size I'm thinking about a document
         let maxWidth: Float = 594
         var imgRatio: Float = actualWidth / actualHeight
@@ -85,10 +85,9 @@ public extension UIImage {
             }
         }
         
-        
         let rect = CGRect(x: 0.0, y: 0.0, width: CGFloat(actualWidth), height: CGFloat(actualHeight))
         UIGraphicsBeginImageContext(rect.size)
-        image.draw(in: rect)
+        self.draw(in: rect)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         let imageData = img!.jpegData(compressionQuality: CGFloat(compressionQuality))
         UIGraphicsEndImageContext()
@@ -146,7 +145,7 @@ public extension UIImage {
         let size = self.wxImageSize(type: type)
         let reImage = resizedImage(size: size)
         let data = reImage.jpegData(compressionQuality: 0.5)!
-        return UIImage.init(data: data)!
+        return UIImage(data: data)!
     }
     
     /**
