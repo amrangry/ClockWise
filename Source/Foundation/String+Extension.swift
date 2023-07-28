@@ -223,75 +223,70 @@ public extension String {
 
 //Personal Name Splitter
 public extension String {
+
+    /// PersonNameComponentsStrategy
+    enum PersonNameComponentsStrategy {
+       case phoneBook
+       case firstLastName
+    }
     /// let name =  "Mr. Steven Paul Jobs Jr."
     /// personNameComponents requires iOS (10.0 and later)
     @available(iOS 10.0, *)
-    func splitName() -> (first: String, last: String) {
+    func splitName(using strategy: PersonNameComponentsStrategy = .phoneBook ) -> (first: String, last: String) {
         let name = self
         var firstName = name
         var lastName = ""
-        
-        // /* Way 1 */
-        //        let nameArray = name.components(separatedBy: " ")
-        //        if !nameArray.isEmpty, nameArray.count > 1 {
-        //            for namePart in nameArray.enumerated() {
-        //                let offset = namePart.offset
-        //                let part = namePart.element
-        //
-        //                if offset == 0 {
-        //                    firstName = part
-        //                } else {
-        //                    lastName += " \(part)"
-        //                }
-        //            }
-        //        }
-        //        firstName = firstName.trim()
-        //        lastName = lastName.trim()
-        //        return (firstName, lastName)
-        
         //            /* Way 2 */
         //            let fullName = "First Last"
         //            let components = fullName.split { !$0.isLetter }.map(String.init) //.map(String($0))
         //            print(components)  // "["First", "Last"]\n"
-        
-        /* Way 3 */
-        // iOS (9.0 and later), macOS (10.11 and later), tvOS (9.0 and later), watchOS (2.0 and later)
-        let nameFormatter = PersonNameComponentsFormatter()
-        // let name =  "Mr. Steven Paul Jobs Jr."
-        // personNameComponents requires iOS (10.0 and later)
-        if let nameComps  = nameFormatter.personNameComponents(from: name) {
-            //            nameComps.namePrefix   // Mr.
-            //            nameComps.givenName    // Steven
-            //            nameComps.middleName   // Paul
-            //            nameComps.familyName   // Jobs
-            //            nameComps.nameSuffix   // Jr.
-            if let givenName = nameComps.givenName {
-                firstName = givenName
+        if case .firstLastName = strategy { /* Way 1 */
+            let nameArray = name.components(separatedBy: " ")
+            if !nameArray.isEmpty, nameArray.count > 1 {
+                for namePart in nameArray.enumerated() {
+                    let offset = namePart.offset
+                    let part = namePart.element
+                    if offset == 0 {
+                        firstName = part
+                    } else {
+                        lastName += " \(part)"
+                    }
+                }
             }
-            if let familyName = nameComps.familyName {
-                lastName = familyName
+            firstName = firstName.trim()
+            lastName = lastName.trim()
+        } else if case .phoneBook = strategy { /* Way 3 */
+            // iOS (9.0 and later), macOS (10.11 and later), tvOS (9.0 and later), watchOS (2.0 and later)
+            let nameFormatter = PersonNameComponentsFormatter()
+            // let name =  "Mr. Steven Paul Jobs Jr."
+            // personNameComponents requires iOS (10.0 and later)
+            if let nameComps  = nameFormatter.personNameComponents(from: name) {
+                //            nameComps.namePrefix   // Mr.
+                //            nameComps.givenName    // Steven
+                //            nameComps.middleName   // Paul
+                //            nameComps.familyName   // Jobs
+                //            nameComps.nameSuffix   // Jr.
+                if let givenName = nameComps.givenName {
+                    firstName = givenName
+                }
+                if let familyName = nameComps.familyName {
+                    lastName = familyName
+                }
+                // It can also be configured to format your names
+                // Default (same as medium), short, long or abbreviated
+                nameFormatter.style = .default
+                nameFormatter.string(from: nameComps)   // "Steven Jobs"
+                nameFormatter.style = .short
+                nameFormatter.string(from: nameComps)   // "Steven"
+                nameFormatter.style = .long
+                nameFormatter.string(from: nameComps)   // "Mr. Steven Paul Jobs jr."
+                nameFormatter.style = .abbreviated
+                nameFormatter.string(from: nameComps)   // SJ
+                // It can also be use to return an attributed string using annotatedString method
+                nameFormatter.style = .long
+                nameFormatter.annotatedString(from: nameComps)   // "Mr. Steven Paul Jobs jr."
             }
-            
-            // It can also be configured to format your names
-            // Default (same as medium), short, long or abbreviated
-            
-            nameFormatter.style = .default
-            nameFormatter.string(from: nameComps)   // "Steven Jobs"
-            
-            nameFormatter.style = .short
-            nameFormatter.string(from: nameComps)   // "Steven"
-            
-            nameFormatter.style = .long
-            nameFormatter.string(from: nameComps)   // "Mr. Steven Paul Jobs jr."
-            
-            nameFormatter.style = .abbreviated
-            nameFormatter.string(from: nameComps)   // SJ
-            
-            // It can also be use to return an attributed string using annotatedString method
-            nameFormatter.style = .long
-            nameFormatter.annotatedString(from: nameComps)   // "Mr. Steven Paul Jobs jr."
         }
-        
         return (firstName, lastName)
     }
     
