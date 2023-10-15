@@ -69,7 +69,7 @@ public enum AppLanguage: Int {
         case .english:
             return "English"
         case .arabic:
-            return "عربي"
+            return "عربى"
         }
     }
     
