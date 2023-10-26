@@ -13,29 +13,27 @@ public extension UIApplication {
     
     /// you have the key window
     var currentWindow: UIWindow? {
-//        connectedScenes
-//        .filter({$0.activationState == .foregroundActive})
-//        .map({$0 as? UIWindowScene})
-//        .compactMap({$0})
-//        .first?.windows
-//        .filter({$0.isKeyWindow}).first
+        //        connectedScenes
+        //        .filter({$0.activationState == .foregroundActive})
+        //        .map({$0 as? UIWindowScene})
+        //        .compactMap({$0})
+        //        .first?.windows
+        //        .filter({$0.isKeyWindow}).first
         
         UIApplication.shared.windows.first(where: { (window) -> Bool in window.isKeyWindow})
     }
-
     static func topViewController(controller: UIViewController? = UIApplication.shared.currentWindow?.rootViewController ) -> UIViewController? {
-//        let xyz = UIApplication.shared.windows.first?.rootViewController
-//        let xyz2 = UIApplication.shared.keyWindow?.rootViewController
-//        let xyz3 = UIApplication.shared.currentWindow
-        
-//        if let windowxyz = UIApplication.shared.windows.first(where: { (window) -> Bool in window.isKeyWindow}) {
-//           //your code
-//             // you have the key window
-//            print(windowxyz)
-//        }
+        //        let xyz = UIApplication.shared.windows.first?.rootViewController
+        //        let xyz2 = UIApplication.shared.keyWindow?.rootViewController
+        //        let xyz3 = UIApplication.shared.currentWindow
         
         if let navigationController = controller as? UINavigationController {
             return topViewController(controller: navigationController.visibleViewController)
+        //        if let windowxyz = UIApplication.shared.windows.first(where: { (window) -> Bool in window.isKeyWindow}) {
+        //           //your code
+        //             // you have the key window
+        //            print(windowxyz)
+        //        }
         }
         if let tabController = controller as? UITabBarController {
             if let selected = tabController.selectedViewController {

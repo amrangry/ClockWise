@@ -20,7 +20,6 @@ public extension UIAlertController {
     }
     
     func alert(title: String, message: String, completion: (() -> Void)?) {
-        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok".localized, style: .default) { (_) in
             completion?()
