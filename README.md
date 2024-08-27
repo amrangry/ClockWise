@@ -4,6 +4,7 @@ ClockWise is a lightweight Swift utilities
 
 <p align="center">
   <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/ClockWise/blob/master/clock.gif?raw=true"/>
 </p>
 
 [![CI Status](https://img.shields.io/travis/amrangry/ClockWise.svg?style=flat)](https://travis-ci.org/amrangry/ClockWise)
