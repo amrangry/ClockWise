@@ -138,8 +138,10 @@ See [CHANGELOG.md](./CHANGELOG.md)
 
 We’d be really happy if you sent us links to your projects where you use our component. Just send an email to amr.elghadban@adkatech.com And do let us know if you have any questions or suggestion regards.
 
+- [AserElkotob](https://apps.apple.com/ae/app/id1573588874).
 - [MotoShop](https://itunes.apple.com/ua/app/).
 - [Awoon](https://apps.apple.com/us/app/awoon/id1342324842).
+- [POS Retail Application - Seddiqi]().
 
 ## Author
 
